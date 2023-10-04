@@ -8,8 +8,6 @@ class User extends Model {
 	}
 }
 
-// const User = sequelize.define(
-// 	"User",
 User.init(
 	{
 		ID: {
