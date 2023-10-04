@@ -26,7 +26,6 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(error);
   }
 });
-
 // Update a product by ID
 router.put("/:id", async (req, res) => {
   try {
