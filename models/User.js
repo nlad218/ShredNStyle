@@ -8,11 +8,12 @@ class User extends Model {
 	}
 }
 
-const User = sequelize.define(
-	"User",
+// const User = sequelize.define(
+// 	"User",
+User.init(
 	{
 		ID: {
-			type: DataTypes.INT,
+			type: DataTypes.INTEGER,
 			allowNull: false,
 			unique: true,
 			primaryKey: true,
@@ -49,7 +50,7 @@ const User = sequelize.define(
 		sequelize,
 		timestamps: false,
 		underscored: true,
-		modelName: "book",
+		modelName: "user",
 	}
 );
 
