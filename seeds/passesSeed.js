@@ -1,0 +1,1 @@
+const { Pass } = require("../models");
