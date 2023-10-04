@@ -17,18 +17,5 @@ router.get("/", async (req, res) => {
   }
 });
 
-//get product by id
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;
 
