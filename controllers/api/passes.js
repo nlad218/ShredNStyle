@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 // Get pass by ID
 router.get("/:id", async (req, res) => {
   try {
-    const passData = await Pass.findByPk(req.params.id);
+    const passData = await Passes.findByPk(req.params.id);
 
     if (!passData) {
       res.status(404).json({ message: "Pass not found" });
