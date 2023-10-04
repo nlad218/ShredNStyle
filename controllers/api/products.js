@@ -47,6 +47,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+// Create a new product
+router.post("/", async (req, res) => {
+  try {
+    const newProduct = await Product.create(req.body);
+
+    // Product created successfully.
+    res.status(201).json(newProduct);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 // Delete a product by ID
 router.delete("/:id", async (req, res) => {
   try {

@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 // Get pass by ID
 router.get("/:id", async (req, res) => {
   try {
-    const passData = await Pass.findByPk(req.params.id);
+    const passData = await Passes.findByPk(req.params.id);
 
     if (!passData) {
       res.status(404).json({ message: "Pass not found" });
@@ -49,6 +49,21 @@ router.put("/:id", async (req, res) => {
 
     // Pass updated successfully.
     res.status(200).json({ message: "Pass updated successfully" });
+  } catch (error) {
+    console.error("-----------------------");
+    console.error(error);
+    console.error("-----------------------");
+    res.status(500).json(error);
+  }
+});
+
+// Create a new pass
+router.post("/", async (req, res) => {
+  try {
+    const newPass = await Passes.create(req.body);
+
+    // Pass created successfully.
+    res.status(201).json(newPass);
   } catch (error) {
     console.error("-----------------------");
     console.error(error);
