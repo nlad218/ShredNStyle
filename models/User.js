@@ -8,8 +8,6 @@ class User extends Model {
 	}
 }
 
-// const User = sequelize.define(
-// 	"User",
 User.init(
 	{
 		ID: {
@@ -27,7 +25,7 @@ User.init(
 				isEmail: true,
 			},
 		},
-		userName: {
+		username: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			unique: true,
