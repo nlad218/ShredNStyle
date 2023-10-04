@@ -13,19 +13,22 @@ router.get("/", async (req, res) => {
     const productData = await Product.findAll();
     res.status(200).json(productData);
   } catch (err) {
-    console.log("-----------------------");
-    console.log(err);
-    console.log("-----------------------");
     res.status(500).json(err);
   }
 });
 
 //get product by id
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;
 
-// router.get("/:id", async (req, res) => {
-// try {
-
-// } catch (error) {
-
-// }
