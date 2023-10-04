@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Pass } = require("../../models");
+const { Passes } = require("../../models");
 
 // Get all passes
 router.get("/", async (req, res) => {
   try {
-    const passData = await Pass.findAll();
+    const passData = await Passes.findAll();
     res.status(200).json(passData);
   } catch (error) {
     console.error("-----------------------");
