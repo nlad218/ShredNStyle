@@ -1,63 +1,249 @@
-
-{{!-- featured Data --}}
-<div id="featuredData">
-    <h2>Featured Products</h2>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
-    <div id="fPcontainer">
-        <div class="card" style="width: 18rem;">
-  <img src="{{product.[0].img}}" class="card-img-top" alt="{{product.[0].name}}">
-  <div class="card-body">
-    <h3>{{product.[0].name}}</h3>
-    <p class="card-text">{{product_desorption}}</p>
-  </div>
-</div>
+{{! img carisel }}
+<main>
+  <div
+    id="carouselExampleAutoplaying"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
     </div>
-</div>
-{{!-- Shop by catagory  --}}
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://coresites-cdn-adm.imgix.net/whitelines_new/wp-content/uploads/2016/09/WI16_008482_013795-reg-mag-1920.jpg?fit=crop"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.rei.com/dam/up_2015-02-2-3-12-stevens-005.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://media.cntraveler.com/photos/63693207429b3d457f71bdda/16:9/w_2580,c_limit/Crested%20Butte_GettyImages-1334412902.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  {{! featured Data }}
+  <div style="text-align: center;">
+    <h1>Featured Products</h1>
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-4">
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+        <div id="fPcontainer" class="col">
+          <div class="card">
+            {{! filler img }}
+            <img
+              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h3>Jacket</h3>
+              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
+                bla bla winter sports</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1>Shop By Category</h1>
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-4">
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+        <div class="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
+            class="img-thumbnail"
+            alt="..."
+          />
+          <h3>Catagory</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
