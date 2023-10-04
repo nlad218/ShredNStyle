@@ -1,0 +1,19 @@
+:root {
+	--prussianBlue: #19304f;
+	--lapis: #27689e;
+	--gold: #d2b02a;
+	--airSuperiority: #66a0c5;
+	--columbia: #d3e5f3;
+	--lightColumbia: #72a0c1;
+	--cyan: #89cff0;
+	--light: #e0ffff;
+	--lightGold: #ffef00;
+}
+
+#product-card {
+	border-color: var(--airSuperiority) !important;
+}
+
+#product-card :hover {
+	border-color: var(--lapis);
+}
