@@ -25,7 +25,7 @@ User.init(
 				isEmail: true,
 			},
 		},
-		userName: {
+		username: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			unique: true,
