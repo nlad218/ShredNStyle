@@ -1,3 +1,4 @@
+
 const sequelize = require("../config/connection");
 const seedLogin = require("./loginSeed");
 const seedPasses = require("./passesSeed");
