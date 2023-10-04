@@ -57,6 +57,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+// Create a new pass
+router.post("/", async (req, res) => {
+  try {
+    const newPass = await Passes.create(req.body);
+
+    // Pass created successfully.
+    res.status(201).json(newPass);
+  } catch (error) {
+    console.error("-----------------------");
+    console.error(error);
+    console.error("-----------------------");
+    res.status(500).json(error);
+  }
+});
+
 // Delete a pass by ID
 router.delete("/:id", async (req, res) => {
   try {
