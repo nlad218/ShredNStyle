@@ -86,8 +86,74 @@ const productData = [
     category_id: 2,
   },
   {
-    name: "Women's Burton [ak] Flare GORE-TEXT 2L jacket",
-    price: 689.95,
+    name: "Women's Burton GORE-TEX Under Mittens",
+    price: 84.95,
+    image:
+      "https://www.burton.com/static/product/W24/10395110502_1.png?impolicy=bglt&imwidth=486",
+  },
+  {
+    name: "Women's Burton GORE-TEX Under Gloves",
+    price: 84.95,
+    image:
+      "https://www.burton.com/static/product/W24/10361109021_1.png?impolicy=bglt&imwidth=486",
+  },
+  {
+    name: "Women's Burton [ak] Oven GORE-TEX Infinium Mittens",
+    price: 179.95,
+    image:
+      "https://www.burton.com/static/product/W24/23346101650_1.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon M4S Goggles (Toric) + Bonus Lens + MFI® Face Mask",
+    price: 319.95,
+    image:
+      "https://www.burton.com/static/product/W24/23578101601_2.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon WM1 Goggles + Bonus Lens + MFI® Face Mask",
+    price: 279.95,
+    image:
+      "https://www.burton.com/static/product/W24/19176105102_2.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon M4S Low Bridge Fit Goggles (Toric) + Bonus Lens + MFI® Face Mask",
+    price: 319.95,
+    image:
+      "https://www.burton.com/static/product/W24/23575101020_2.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon Logan WaveCel® Ski & Snowboard Helmet",
+    price: 239.95,
+    image:
+      "https://www.burton.com/static/product/W24/22734103502_3.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon Merak WaveCel® Ski & Snowboard Helmet",
+    price: 319.95,
+    image:
+      "https://www.burton.com/static/product/W24/22733103100_1.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon Oslo WaveCel® Ski & Snowboard Helmet",
+    price: 219.95,
+    image:
+      "https://www.burton.com/static/product/W24/23570101501_3.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon MFI® Lightweight Neck Warmer",
+    price: 39.95,
+    image:
+      "https://www.burton.com/static/product/W24/23811100501_1.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon MFI® Paneled Neck Warmer",
+    price: 69.95,
+    image:
+      "https://www.burton.com/static/product/W24/23823100001_1.png?impolicy=bglt&imwidth=282",
+  },
+  {
+    name: "Anon MFI® Micro Fur Neck Warmer",
+    price: 59.95,
     image:
       "https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
     category_id: 2,
