@@ -1,25 +1,19 @@
-// import { SMTPClient } from "emailjs"; //this is esm - we're using common JS
-// const { SMTPClient } = require("emailjs");
-// const client = new SMTPClient({
-//   user: "ShredNstyle@gmail.com",
-//   password: "Mollie32!",
-//   host: "smtp.gmail.com",
-//   ssl: true,
-// });
+const emailjs = require("@emailjs/browser");
 
-// const sendEmail = (userEmail) => {
-//   client.send(
-//     {
-//       text: "This is a verification email stating you have sign up to ShredNstyle.com",
-//       from: "ShredNstyle@gmail.com>",
-//       to: userEmail,
-//       cc: "",
-//       subject: "Vertification",
-//     },
-//     (err, message) => {
-//       console.log(err || message);
-//     }
-//   );
-// };
+function sendMail() {
+	var templateParams = {
+		name: "James",
+		notes: "Check this out!",
+	};
 
-// module.exports = { sendEmail };
+	emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams).then(
+		function (response) {
+			console.log("SUCCESS!", response.status, response.text);
+		},
+		function (error) {
+			console.log("FAILED...", error);
+		}
+	);
+}
+
+module.exports = { sendMail };
