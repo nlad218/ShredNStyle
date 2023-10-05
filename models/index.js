@@ -32,4 +32,4 @@ module.exports = {
   Product,
   Order,
   OrderProduct
-};
+}
