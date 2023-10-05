@@ -10,10 +10,10 @@
 	--lightGold: #ffef00;
 }
 
-#product-card {
-	border-color: var(--airSuperiority) !important;
+.product-card {
+	border-color: var(--light) !important;
 }
 
-#product-card :hover {
-	border-color: var(--lapis);
+.product-card:hover {
+	border-color: var(--lapis) !important;
 }
