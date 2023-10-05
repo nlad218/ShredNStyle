@@ -75,6 +75,7 @@ p {
 }
 
 .modal .nav-tabs {
+	border: none;
 	text-decoration: none;
 }
 
