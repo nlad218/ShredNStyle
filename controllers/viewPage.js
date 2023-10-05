@@ -1,10 +1,14 @@
 const router = require("express").Router();
-// const { User } = require("../../models");
+
+const { Category } = require("../models");
 
 // CREATE new user
 router.get("/", async (req, res) => {
   try {
-    res.render("home");
+    const categoriesData = await Category.findAll();
+    const categories = categoriesData.map((obj) => obj.get({ plain: true }));
+
+    res.render("home", { categories });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

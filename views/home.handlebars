@@ -174,78 +174,9 @@
     <h1>Shop By Category</h1>
     <div class="container text-center">
       <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-4">
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
-        <div class="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6aTKQXXsuwHi2lbDgBOQrYEYZ-AMszc-LGTKFlqR-qZqHDqmiat1GAM2owKHRq35nUY&usqp=CAU"
-            class="img-thumbnail"
-            alt="..."
-          />
-          <h3>Catagory</h3>
-        </div>
+        {{#each categories as |category|}}
+        {{> categoryCard}}
+        {{/each}}
       </div>
     </div>
   </div>
