@@ -38,6 +38,7 @@ p {
 .modal-header {
 	background-color: var(--airSuperiority);
 	color: var(--light);
+	border: none;
 }
 
 .modal h5 {
