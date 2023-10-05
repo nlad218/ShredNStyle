@@ -12,6 +12,7 @@
 
 h1 {
   font-family: "Dela Gothic One", sans-serif;
+  margin: 3rem;
 }
 
 h2,
@@ -27,15 +28,54 @@ p {
   font-family: "Rajdhani", sans-serif;
 }
 
-#product-card {
-  border-color: var(--airSuperiority) !important;
+.product-card {
+  border-color: var(--light) !important;
 }
 
-#product-card :hover {
-  border-color: var(--lapis);
+.product-card:hover {
+  border-color: var(--lapis) !important;
 }
 
 #logo {
   height: 150px;
   width: auto;
+}
+
+.login {
+  border: none;
+  font-family: "Kanit", sans-serif;
+  background: none;
+}
+
+.foot {
+  background-color: azure;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: end;
+  background-image: url("https://vastphotos.com/files/uploads/photos/11070/high-resolution-alpine-panorama-l.jpg?v=20220712073521");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 992px) {
+  #about {
+    width: 500px;
+    margin: 0 5rem;
+  }
+}
+
+/* HOME PAGE CSS */
+
+.imgcel {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
 }
