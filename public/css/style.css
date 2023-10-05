@@ -34,3 +34,8 @@ p {
 #product-card :hover {
   border-color: var(--lapis);
 }
+
+#logo {
+  height: 150px;
+  width: auto;
+}
