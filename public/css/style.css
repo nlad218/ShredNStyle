@@ -1,17 +1,17 @@
 :root {
-  --prussianBlue: #19304f;
-  --lapis: #27689e;
-  --gold: #d2b02a;
-  --airSuperiority: #66a0c5;
-  --columbia: #d3e5f3;
-  --lightColumbia: #72a0c1;
-  --cyan: #89cff0;
-  --light: #e0ffff;
-  --lightGold: #ffef00;
+	--prussianBlue: #19304f;
+	--lapis: #27689e;
+	--gold: #d2b02a;
+	--airSuperiority: #66a0c5;
+	--columbia: #d3e5f3;
+	--lightColumbia: #72a0c1;
+	--cyan: #89cff0;
+	--light: #e0ffff;
+	--lightGold: #ffef00;
 }
 
 h1 {
-  font-family: "Dela Gothic One", sans-serif;
+	font-family: "Dela Gothic One", sans-serif;
 }
 
 h2,
@@ -20,17 +20,17 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Kanit", sans-serif;
+	font-family: "Kanit", sans-serif;
 }
 
 p {
-  font-family: "Rajdhani", sans-serif;
+	font-family: "Rajdhani", sans-serif;
 }
 
-#product-card {
-  border-color: var(--airSuperiority) !important;
+.product-card {
+	border-color: var(--light) !important;
 }
 
-#product-card :hover {
-  border-color: var(--lapis);
+.product-card:hover {
+	border-color: var(--lapis) !important;
 }
