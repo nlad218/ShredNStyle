@@ -10,6 +10,23 @@
 	--lightGold: #ffef00;
 }
 
+h1 {
+	font-family: "Dela Gothic One", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+	font-family: "Kanit", sans-serif;
+}
+
+p {
+	font-family: "Rajdhani", sans-serif;
+}
+
 .product-card {
 	border-color: var(--light) !important;
 }
