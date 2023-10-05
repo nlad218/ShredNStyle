@@ -13,14 +13,14 @@ Order.init(
       autoIncrement: true,
     },
     purchaseDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       defaultValue: DataTypes.NOW,
       allowNull: false,
     },
-    customer_id: {
-      type: DataTypes.INTEGER,
-      references: { model: "user", key: "id" },
-    },
+    // customer_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: { model: "user", key: "id" },
+    // },
     purchaseAmt: {
       type: DataTypes.DECIMAL,
       allowNull: false,
@@ -31,7 +31,7 @@ Order.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    // underscored: true,
     modelName: "order",
   }
 );
