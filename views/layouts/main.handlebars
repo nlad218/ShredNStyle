@@ -96,27 +96,65 @@
 		</nav>
 		<main>
 			{{{body}}}
-		<!-- Login Modal -->
-		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="loginModalLabel">Login</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Login Form -->
-						<form>
-							<div class="mb-3">
-								<label for="email" class="form-label">Email address</label>
-								<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+				<!-- Login/Sign Up Modal -->
+				<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header d-flex flex-column-reverse">
+								<h5 class="modal-title" id="loginModalLabel">Login / Sign Up</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
-							<div class="mb-3">
-								<label for="password" class="form-label">Password</label>
-								<input type="password" class="form-control" id="password" placeholder="Enter your password">
+							<div class="modal-body">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs justify-content-center mb-4" id="myTabs" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link border rounded active border-secondary" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link border rounded border-secondary" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
+									</li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content" id="myTabContent">
+									<!-- Login Tab -->
+									<div class="tab-pane fade show active text-center" id="login" role="tabpanel" aria-labelledby="login-tab">
+										<form class="mx-auto">
+											<h3 class="mb-2">Welcome back!</h3>
+											<div class="mb-3 text-start">
+												<label for="loginEmail" class="form-label">Email address or Username:</label>
+												<input type="text" class="form-control" id="loginEmail" placeholder="Enter your email or username">
+											</div>
+											<div class="mb-3 text-start">
+												<label for="loginPassword" class="form-label">Password:</label>
+												<input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+											</div>
+											<button type="submit" class="btn btn-primary">Login</button>
+										</form>
+									</div>
+									
+									<!-- Sign Up Tab -->
+									<div class="tab-pane fade text-center" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+										<form class="mx-auto">
+											<h3 class="mb-2">Join the club!</h3>
+											<div class="mb-3 text-start">
+												<label for="signupEmail" class="form-label">Email address:</label>
+												<input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+											</div>
+											<div class="mb-3 text-start">
+												<label for="signupUsername" class="form-label">Username:</label>
+												<input type="text" class="form-control" id="signupUsername" placeholder="Enter your username">
+											</div>
+											<div class="mb-3 text-start">
+												<label for="signupPassword" class="form-label">Password:</label>
+												<input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+											</div>
+											<button type="submit" class="btn btn-success">Sign Up</button>
+										</form>
+									</div>
+								</div>
 							</div>
-							<button type="submit" class="btn btn-primary">Login</button>
-						</form>
+						</div>
 					</div>
 				</div>
 				<script src="./js/login.js"></script>

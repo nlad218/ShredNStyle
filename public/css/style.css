@@ -34,3 +34,52 @@ p {
 .product-card:hover {
 	border-color: var(--lapis) !important;
 }
+
+.modal-header {
+	background-color: var(--airSuperiority);
+	color: var(--light);
+}
+
+.modal h5 {
+	font-size: 2rem;
+}
+
+.modal-body {
+	background-color: var(--prussianBlue);
+	color: var(--light);
+}
+
+.tab-content button {
+	background-color: var(--gold);
+	color: black;
+}
+
+.tab-content button:hover {
+	background-color: var(--lightGold);
+}
+
+.modal a {
+	text-decoration: none;
+	border: none;
+	color: black;
+	background-color: var(--gold);
+}
+
+.modal a:hover {
+	background-color: var(--lightGold);
+}
+
+.modal .nav-tabs .nav-link.active {
+	background-color: var(--lapis);
+	color: var(--columbia);
+}
+
+.modal .nav-tabs {
+	border: none;
+	text-decoration: none;
+}
+
+.modal .nav-item {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
