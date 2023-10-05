@@ -158,7 +158,6 @@ const productData = [
       "https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
     category_id: 2,
   },
-
   {
     name: "Ikon Pass",
     price: 1300.59,
