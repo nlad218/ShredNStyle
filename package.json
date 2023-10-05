@@ -13,11 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "bcrypt": "^5.0.0",
     "bootstrap-icons": "^1.11.1",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
-    "emailjs": "^4.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.5",
     "express-session": "^1.17.1",
