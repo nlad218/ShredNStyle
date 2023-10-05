@@ -16,4 +16,4 @@ function sendMail() {
 	);
 }
 
-module.exports = { sendEmail };
+module.exports = { sendMail };
