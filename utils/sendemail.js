@@ -1,25 +1,19 @@
-// import { SMTPClient } from "emailjs";
+const emailjs = require("@emailjs/browser");
 
-// const client = new SMTPClient({
-// 	user: "ShredNstyle@gmail.com",
-// 	password: "Mollie32!",
-// 	host: "smtp.gmail.com",
-// 	ssl: true,
-// });
+function sendMail() {
+	var templateParams = {
+		name: "James",
+		notes: "Check this out!",
+	};
 
-// const sendEmail = (userEmail) => {
-// 	client.send(
-// 		{
-// 			text: "This is a verification email stating you have signed up for ShredNstyle.com",
-// 			from: "ShredNstyle@gmail.com",
-// 			to: userEmail,
-// 			cc: "",
-// 			subject: "Verification",
-// 		},
-// 		(err, message) => {
-// 			console.log(err || message);
-// 		}
-// 	);
-// };
+	emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams).then(
+		function (response) {
+			console.log("SUCCESS!", response.status, response.text);
+		},
+		function (error) {
+			console.log("FAILED...", error);
+		}
+	);
+}
 
-// export { sendEmail };
+module.exports = { sendEmail };

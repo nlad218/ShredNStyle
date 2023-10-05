@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const { sendEmail } = require("../../utils/sendemail");
+const { sendEmail } = require("../../utils/sendemail.js");
 // Create a new user
 router.post("/", async (req, res) => {
 	try {
