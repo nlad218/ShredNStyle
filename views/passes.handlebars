@@ -14,7 +14,7 @@
 </div>
 
 <div class="container-fluid pass-container m-2">
-	<div class="row justify-content-center">
+	<div class="row d-flex justify-content-center">
 		<div class="card pass-card col-6 m-2" style="width:300px">
 			<img
 				class="card-img-top mt-3"
@@ -22,16 +22,30 @@
 				alt="Card image"
 			/>
 			<div class="card-body">
-				<h4 class="card-title">Ikon Pass</h4>
-				<p class="card-text">$1,259</p>
+				<h4 class="card-title text-center">Ikon Pass</h4>
+				<p class="card-text text-center">$1,259</p>
 				<ul>
 					<li>58 unique destinations worldwide</li>
 					<li>No blackout dates at any resort</li>
 					<li>16 unlimited skiing and riding destinations</li>
 					<li>Up to 7 days at 41 destinations</li>
 				</ul>
-				<a href="#" class="btn btn-primary d-flex justify-content-center">View
-					Details</a>
+        <div class="row justify-content-between">
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+            data-bs-toggle="modal"
+            data-bs-target="#IconModal"
+          >
+            More info
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+          >
+            Add to cart
+          </button>
+        </div>
 			</div>
 		</div>
 		<div class="card pass-card col-6 m-2" style="width:300px">
@@ -41,18 +55,37 @@
 				alt="Card image"
 			/>
 			<div class="card-body">
-				<h4 class="card-title">Epic Pass</h4>
-				<p class="card-text">$949</p>
+				<h4 class="card-title text-center">Epic Pass</h4>
+				<p class="card-text text-center">$949</p>
 				<ul>
 					<li>Unlimited access to 41 resorts</li>
 					<li>Limited access to international resorts</li>
 					<li>Includes Epic Mountain Rewards</li>
 					<li>Pass protection with Epic coverage</li>
 				</ul>
-				<a href="#" class="btn btn-primary d-flex justify-content-center">View
-					Details</a>
+        <div class="row justify-content-between">
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+            data-bs-toggle="modal"
+            data-bs-target="#epicModal"
+          >
+            More info
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+          >
+            Add to cart
+          </button>
+        </div>
 			</div>
 		</div>
 
-	</div>
-</div>
+    <div class="modal fade" id="IconModal" tabindex="-1" aria-labelledby="IconModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+      </div>
+    </div>

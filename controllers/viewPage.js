@@ -42,6 +42,15 @@ router.get("/passes", async (req, res) => {
 	}
 });
 
+router.get("/productPage", async (req, res) => {
+  try {
+    res.render("productPage");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/resort", async (req, res) => {
 	try {
 		res.render("resortInfo");
