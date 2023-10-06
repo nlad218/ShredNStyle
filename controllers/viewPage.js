@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     const categoriesData = await Category.findAll();
     const categories = categoriesData.map((obj) => obj.get({ plain: true }));
-
+    console.log(categories);
     res.render("home", { categories });
   } catch (err) {
     console.log(err);
@@ -54,6 +54,15 @@ router.get("/products", async (req, res) => {
 router.get("/passes", async (req, res) => {
   try {
     res.render("passes");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/productPage", async (req, res) => {
+  try {
+    res.render("productPage");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

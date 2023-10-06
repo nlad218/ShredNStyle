@@ -14,6 +14,15 @@ OrderProduct.init(
       type: DataTypes.INTEGER,
       references: { model: "product", key: "id" },
     },
+
+    // Color and Size Options
+    //  color_op: {
+    //   type: DateTypes.STRING(30),
+    // },
+    // size_op: {
+    //   type: DateTypes.STRING(2),
+    // }
+
   },
   {
     sequelize,
