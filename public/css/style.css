@@ -236,13 +236,14 @@ footer {
 	color: var(--light);
 }
 
-.pass-card a {
+.pass-card button {
 	border: none;
 	background-color: var(--gold);
 	color: black;
 }
 
-.pass-card a:hover {
+.pass-card button:hover {
 	background-color: var(--lightGold);
+	color: black;
 }
 
