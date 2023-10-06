@@ -4,6 +4,7 @@ const num = document.querySelector(".num");
 let a = 1;
 
 plus.addEventListener("click", () => {
+  console.log(plus);
   a++;
   a = a < 10 ? "0" + a : a;
   num.innerText = a;
