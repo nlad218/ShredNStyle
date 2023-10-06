@@ -3,6 +3,7 @@ const User = require("./User");
 const Category = require("./categories");
 const Order = require("./orders");
 const OrderProduct = require("./orderproduct");
+const ResortInfo = require("./ResortInfo")
 
 Product.belongsTo(Category, { foreignKey: "category_id" });
 
@@ -31,5 +32,6 @@ module.exports = {
   Category,
   Product,
   Order,
-  OrderProduct
+  OrderProduct,
+  ResortInfo
 }
