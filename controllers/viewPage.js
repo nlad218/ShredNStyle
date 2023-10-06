@@ -42,14 +42,23 @@ router.get("/passes", async (req, res) => {
 	}
 });
 
-router.get("/productPage", async (req, res) => {
-  try {
-    res.render("productPage");
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+
+router.get("/resort", async (req, res) => {
+	try {
+		res.render("resortInfo");
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
 });
+
+router.get("*", async (req, res) => {
+	try {
+		res.render("404");
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
 
 router.get("/productPage", async (req, res) => {
   try {
@@ -59,5 +68,7 @@ router.get("/productPage", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 module.exports = router;
