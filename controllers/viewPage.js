@@ -80,14 +80,6 @@ router.get("/resort/:state", async (req, res) => {
   res.render("stateResorts", { stateResorts });
 });
 
-router.get("*", async (req, res) => {
-  try {
-    res.render("404");
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 router.get("/productPage", async (req, res) => {
   try {
@@ -98,4 +90,12 @@ router.get("/productPage", async (req, res) => {
   }
 });
 
+router.get("*", async (req, res) => {
+  try {
+    res.render("404");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
