@@ -42,6 +42,7 @@ router.get("/passes", async (req, res) => {
 	}
 });
 
+
 router.get("/resort", async (req, res) => {
 	try {
 		res.render("resortInfo");
@@ -51,15 +52,6 @@ router.get("/resort", async (req, res) => {
 	}
 });
 
-
-
-
-
-
-
-
-
-
 router.get("*", async (req, res) => {
 	try {
 		res.render("404");
@@ -67,6 +59,16 @@ router.get("*", async (req, res) => {
 		console.log(err);
 		res.status(500).json(err);
 	}
+
+router.get("/productPage", async (req, res) => {
+  try {
+    res.render("productPage");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
+
+
 
 module.exports = router;
