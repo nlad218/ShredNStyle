@@ -301,30 +301,53 @@ footer {
 
 #mainImgCas {
 	height: 600px;
-	margin-bottom: 2rem;
 }
 
 .wrapper {
-	height: 120px;
-	min-width: 380px;
+	font-family: "Kanit", sans-serif;
+	height: 30px;
+	width: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: #fff;
 	border-radius: 12px;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	/* ÷\ box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); */
+	margin-left: 1rem;
+	border: 1.5px solid #19304f;
 }
 .wrapper span {
-	width: 100%;
+	width: 50px;
 	text-align: center;
-	font-size: 55px;
-	font-weight: 600;
+	font-size: 1rem;
+	font-weight: 200;
 	cursor: pointer;
 	user-select: none;
 }
 .wrapper span.num {
-	font-size: 50px;
+	font-size: 1rem;
 	border-right: 2px solid rgba(0, 0, 0, 0.2);
 	border-left: 2px solid rgba(0, 0, 0, 0.2);
 	pointer-events: none;
+}
+
+.review {
+	border-bottom: 2px solid #19304f;
+	width: 40%;
+}
+
+#search {
+	background-color: var(--airSuperiority);
+	border-color: black;
+}
+
+#searchBtn {
+	background-color: var(--gold);
+	border-color: black;
+	color: black;
+}
+
+.nav-item a:hover,
+.nav-item button:hover {
+	color: var(--gold) !important;
 }
