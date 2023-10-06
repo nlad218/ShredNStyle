@@ -1,4 +1,4 @@
-<h1 class="ms-5 mt-3">Product Name Filler</h1>
+<h1 class="ms-5 mt-3">{{product.name}}</h1>
 
 <h2 class="ms-5">A very short description/ or not maybe not</h2>
 
@@ -51,7 +51,7 @@
   <div id="mainImgCas">
     <img
       id="mainProImg"
-      src="https://www.burton.com/static/product/W21/17200104000_1.png"
+      src="{{product.image}}"
       class="figure-img img-fluid rounded"
       alt="..."
     />
@@ -59,7 +59,7 @@
   </div>
 </div>
 <div class="m-5">
-  <h2 class="my-3">Price: $10000</h2>
+  <h2 class="my-3">Price: {{product.price}}</h2>
   <h3 class="my-3">Color Options</h3>
   <h3 class="my-3">Size Options</h3>
 

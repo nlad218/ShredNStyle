@@ -77,96 +77,9 @@
     <h1 class="m-5">Featured Products</h1>
     <div class="container text-center">
       <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-4">
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
-        <div id="fPcontainer" class="col">
-          <div class="card">
-            {{! filler img }}
-            <img
-              src="https://www.fabricoftheuniverse.com/cdn/shop/products/Y-2050GoldBomberCatalogback_800x.jpg?v=1640636362"
-              class="card-img-top"
-              alt=""
-            />
-            <div class="card-body">
-              <h3>Jacket</h3>
-              <p class="card-text">Filler Text, bla bla bla yellow jacket bla
-                bla bla winter sports</p>
-            </div>
-          </div>
-        </div>
+         {{#each products as |product|}}
+        {{> productItem}}
+        {{/each}}
       </div>
     </div>
   </div>
@@ -202,11 +115,3 @@
   </div>
 </main>
 
-
-
-{{!-- 
-
- <button class="sbutton">Resort
-      Info</button>
-    <button class="sbutton">Weather</button>
-    <button class="sbutton">Lift Tickets</button> --}}
