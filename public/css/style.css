@@ -31,12 +31,27 @@ p {
 	font-family: "Rajdhani", sans-serif;
 }
 
-.product-card {
-	border-color: var(--light) !important;
+/* PRODUCT LIST  */
+
+.productIMG {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.proCard {
+  border: 2px solid #19304f;
+  padding: 0.5rem;
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+  border-radius: 20px;
+  margin: 2rem;
 }
 
 .product-card:hover {
-	color: var(--lapis);
+  color: var(--lapis);
 }
 
 #logo {
@@ -199,6 +214,8 @@ footer {
 	color: black;
 }
 
+/* MODEL */
+
 .modal-header {
 	background-color: var(--airSuperiority);
 	color: var(--light);
@@ -257,6 +274,14 @@ footer {
 .form-control:focus {
 	border-color: black;
 	box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 8px var(--gold);
+}
+
+/* passes page  */
+
+.passImg {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .pass-card {

@@ -1,1 +1,41 @@
-{{!-- Grab weather data and possibly do a search bar for mountain name? --}}
+{{! Grab weather data and possibly do a search bar for mountain name? }}
+{{! use the ski api to show states avilable, then have another drop down that filters all the mountains in that state, then once a mountain is chosen that long lat from the ski api is sent to the weather api and given a current weather and a 5 day forecast  }}
+<section class="container text-center d-flex align-self-center">
+  <br />
+
+  <div class="card col" style=" align-items:center;">
+    <img
+      src="https://images.unsplash.com/photo-1629624927838-3b39b7fdd33c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ludGVyJTIwbW91bnRhaW58ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+      class="card-img-top"
+      style="width:35rem; height:30rem"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Search your state, hit search then choose whichever
+        mountain your looking at!</h5>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Click to search states
+        </button>
+        <ul class="dropdown-menu" id="resort-search">
+          {{! this is referancing the new array name, each is my for loop map method in handlebars }}
+          {{#each resorts as |resort|}}
+            <li><a class="dropdown-item" data-resort={{resort.state}}>
+                {{resort.state}}
+              </a></li>
+
+          {{/each}}
+
+        </ul>
+      </div>
+      <br />
+    </div>
+  </div>
+</section>
+
+<script src="/js/searchResort.js"></script>
