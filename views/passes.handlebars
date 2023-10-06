@@ -1,55 +1,91 @@
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div
-      id="product-card"
-      class="m-2 card text-center col-4 border-primary border-4 rounded"
-      style="width: 18rem;"
-    >
-      <img
-        class="img-fluid"
-        src="https://media.istockphoto.com/id/159175821/photo/snowboard-equipment.jpg?s=612x612&w=0&k=20&c=Yz_T3QZuRQNF0AqDZTZtul0rHTX9Bonuec99OnHULUk="
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Pass!</h5>
-        <h6 class="card-title">Price</h6>
-        <p class="card-text">Product Description</p>
-      </div>
-    </div>
-    <div
-      id="product-card"
-      class="m-2 card text-center col-4 border-primary border-4 rounded"
-      style="width: 18rem;"
-    >
-      <img
-        class="img-fluid"
-        src="https://media.istockphoto.com/id/159175821/photo/snowboard-equipment.jpg?s=612x612&w=0&k=20&c=Yz_T3QZuRQNF0AqDZTZtul0rHTX9Bonuec99OnHULUk="
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Pass!</h5>
-        <h6 class="card-title">Price</h6>
-        <p class="card-text">Product Description</p>
-      </div>
-    </div>
-    <div
-      id="product-card"
-      class="m-2 card text-center col-4 border-primary border-4 rounded"
-      style="width: 18rem;"
-    >
-      <img
-        class="img-fluid"
-        src="https://media.istockphoto.com/id/159175821/photo/snowboard-equipment.jpg?s=612x612&w=0&k=20&c=Yz_T3QZuRQNF0AqDZTZtul0rHTX9Bonuec99OnHULUk="
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Pass!</h5>
-        <h6 class="card-title">Price</h6>
-        <p class="card-text">Product Description</p>
-      </div>
-    </div>
-  </div>
+<div class="bg-image position-relative">
+	<img
+		style="width: 100%; height: 12rem;"
+		src="https://vastphotos.com/files/uploads/photos/11406/mont-blanc-sunrise-panorama-l.jpg?v=20230421081810"
+		class="w-100"
+		alt=""
+	/>
+	<div
+		class="mask text-light position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
+		style="background-color: rgba(0, 0, 0, 0.5)"
+	>
+		<h2 class="text-center">Mountain Passes</h2>
+	</div>
 </div>
+
+<div class="container-fluid pass-container m-2">
+	<div class="row d-flex justify-content-center">
+		<div class="card pass-card col-6 m-2" style="width:300px">
+			<img
+				class="card-img-top mt-3"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_15Of8G1ccr3yF7yExwVEnY8f_7fGNQJAw&usqp=CAU"
+				alt="Card image"
+			/>
+			<div class="card-body">
+				<h4 class="card-title text-center">Ikon Pass</h4>
+				<p class="card-text text-center">$1,259</p>
+				<ul>
+					<li>58 unique destinations worldwide</li>
+					<li>No blackout dates at any resort</li>
+					<li>16 unlimited skiing and riding destinations</li>
+					<li>Up to 7 days at 41 destinations</li>
+				</ul>
+        <div class="row justify-content-between">
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+            data-bs-toggle="modal"
+            data-bs-target="#IconModal"
+          >
+            More info
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+          >
+            Add to cart
+          </button>
+        </div>
+			</div>
+		</div>
+		<div class="card pass-card col-6 m-2" style="width:300px">
+			<img
+				class="card-img-top mt-3"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkOkKLmsUvljnnFLdEPE0Jw2Bakajr3mR8vQ&usqp=CAU"
+				alt="Card image"
+			/>
+			<div class="card-body">
+				<h4 class="card-title text-center">Epic Pass</h4>
+				<p class="card-text text-center">$949</p>
+				<ul>
+					<li>Unlimited access to 41 resorts</li>
+					<li>Limited access to international resorts</li>
+					<li>Includes Epic Mountain Rewards</li>
+					<li>Pass protection with Epic coverage</li>
+				</ul>
+        <div class="row justify-content-between">
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+            data-bs-toggle="modal"
+            data-bs-target="#epicModal"
+          >
+            More info
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary col-5"
+          >
+            Add to cart
+          </button>
+        </div>
+			</div>
+		</div>
+
+    <div class="modal fade" id="IconModal" tabindex="-1" aria-labelledby="IconModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+      </div>
+    </div>

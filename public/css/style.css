@@ -1,13 +1,13 @@
 :root {
-  --prussianBlue: #19304f;
-  --lapis: #27689e;
-  --gold: #d2b02a;
-  --airSuperiority: #66a0c5;
-  --columbia: #d3e5f3;
-  --lightColumbia: #72a0c1;
-  --cyan: #89cff0;
-  --light: #e0ffff;
-  --lightGold: #ffef00;
+	--prussianBlue: #19304f;
+	--lapis: #27689e;
+	--gold: #d2b02a;
+	--airSuperiority: #66a0c5;
+	--columbia: #d3e5f3;
+	--lightColumbia: #72a0c1;
+	--cyan: #89cff0;
+	--light: #e0ffff;
+	--lightGold: #ffef00;
 }
 
 h1 {
@@ -24,54 +24,55 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Kanit", sans-serif;
+	font-family: "Kanit", sans-serif;
 }
 
 p {
-  font-family: "Rajdhani", sans-serif;
+	font-family: "Rajdhani", sans-serif;
 }
 
 .product-card {
-  border-color: var(--light) !important;
+	border-color: var(--light) !important;
 }
 
 .product-card:hover {
-  border-color: var(--lapis) !important;
+	color: var(--lapis);
 }
 
 #logo {
-  height: 150px;
-  width: auto;
+	height: 150px;
+	width: auto;
 }
 
 .login {
-  border: none;
-  font-family: "Kanit", sans-serif;
-  background: none;
+	border: none;
+	font-family: "Kanit", sans-serif;
+	background: none;
 }
 
 .foot {
+
   background-color: rgba(240, 255, 255, 0.75);
   border-radius: 20px;
   padding: 0.5rem;
 }
 
 footer {
-  margin-top: 3rem;
-  padding: 0 4rem;
-  display: flex;
-  justify-content: end;
-  background-image: url("https://vastphotos.com/files/uploads/photos/11070/high-resolution-alpine-panorama-l.jpg?v=20220712073521");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+	margin-top: 3rem;
+	padding: 0 4rem;
+	display: flex;
+	justify-content: end;
+	background-image: url("https://vastphotos.com/files/uploads/photos/11070/high-resolution-alpine-panorama-l.jpg?v=20220712073521");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 @media only screen and (min-width: 992px) {
-  #about {
-    width: 500px;
-    margin: 0 5rem;
-  }
+	#about {
+		width: 500px;
+		margin: 0 5rem;
+	}
 }
 
 /* HOME PAGE CSS */
@@ -259,18 +260,22 @@ footer {
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 8px var(--gold);
 }
 
-/* stuff i might use  */
+.pass-card {
+	background-color: var(--prussianBlue);
+	color: var(--light);
+}
 
-/* .sbutton {
-  font-family: "Kanit", sans-serif;
-  font-size: 3rem;
-  text-decoration: none;
-  margin: 2rem;
-  height: 10rem;
-  width: 70%;
-  background-color: none !important;
-  border: 3px solid #19304f;
-} */
+.pass-card button {
+	border: none;
+	background-color: var(--gold);
+	color: black;
+}
+
+.pass-card button:hover {
+	background-color: var(--lightGold);
+	color: black;
+}
+
 
 /* PRODUCT PAGE CSS */
 
