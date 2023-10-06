@@ -1,18 +1,21 @@
 const router = require("express").Router();
-const { ResortInfo } = require("../models");
-const { Category } = require("../models");
+const { Category, Product, ResortInfo } = require("../models");
 
 // CREATE new user
 router.get("/", async (req, res) => {
-	try {
-		const categoriesData = await Category.findAll();
-		const categories = categoriesData.map((obj) => obj.get({ plain: true }));
+  try {
+    const categoriesData = await Category.findAll();
+    const categories = categoriesData.map((obj) => obj.get({ plain: true }));
+    const productsData = await Product.findAll();
+    const products = productsData.map((obj) => obj.get({ plain: true })).slice(0,6);
+    
 
-		res.render("home", { categories });
-	} catch (err) {
-		console.log(err);
-		res.status(500).json(err);
-	}
+    res.render("home", { categories, products });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+  
 });
 
 router.get("/cart", async (req, res) => {
@@ -80,22 +83,21 @@ router.get("/resort/:state", async (req, res) => {
 	res.render("stateResorts", { stateResorts });
 });
 
-router.get("/productPage", async (req, res) => {
-	try {
-		res.render("productPage");
-	} catch (err) {
-		console.log(err);
-		res.status(500).json(err);
-	}
-});
+router.get("/productPage/:id", async (req, res) => {
+  try {
+    const productsData = await Product.findOne({
+      where: {
+        id: req.params.id
+      }
+    });
 
-router.get("/about", async (req, res) => {
-	try {
-		res.render("about");
-	} catch (err) {
-		console.log(err);
-		res.status(500).json(err);
-	}
+    const product = productsData.get({plain: true});
+    console.log(product);
+    res.render("productPage", {product});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("*", async (req, res) => {
