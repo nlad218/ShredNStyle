@@ -1,0 +1,21 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {{#each stateResorts as |resort|}}
+
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{resort.resortName}}</h3>
+          <h4>The phone number is
+            {{resort.number}}. The address is
+            {{resort.address}}</h4>
+
+          <h5 class="card-text">{{resort.description}}</h5>
+
+          {{!-- <h2>{{getweather resort.lat resort.long}}</h2> --}}
+
+        </div>
+      </div>
+    </div>
+
+  {{/each}}
+</div>
