@@ -11,8 +11,11 @@
 }
 
 h1 {
-	font-family: "Dela Gothic One", sans-serif;
-	margin: 3rem;
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+#h1main {
+  margin: 3rem;
 }
 
 h2,
@@ -85,6 +88,7 @@ footer {
   margin: 2rem;
   border-radius: 40px;
   font-size: 3rem;
+  text-decoration: none;
 }
 
 .sbutt {
@@ -103,7 +107,9 @@ footer {
   background-size: cover;
   text-align: left;
   padding-left: 1rem;
+  transition: 0.4s;
 }
+
 #servicediv1:hover {
   filter: grayscale(100%) brightness(50%);
   background-image: url("https://www.purgatory.ski/wp-content/uploads/sites/2/2022/08/Purgatory_Summer_Activities_8-18-2019-9992-2000x1333.jpg");
@@ -112,6 +118,8 @@ footer {
   background-size: cover;
   text-align: left;
   padding-left: 1rem;
+  transform: scale(105%);
+  box-shadow: 5px 5px 30px black;
 }
 
 #servicediv2 {
@@ -120,6 +128,7 @@ footer {
   background-position: 50% 80%;
   background-size: cover;
   justify-content: center;
+  transition: 0.4s;
 }
 #servicediv2:hover {
   filter: grayscale(100%) brightness(50%);
@@ -128,7 +137,8 @@ footer {
   background-position: 50% 80%;
   background-size: cover;
   justify-content: center;
-
+  transform: scale(105%);
+  box-shadow: 5px 5px 30px black;
 }
 
 #servicediv3 {
@@ -137,6 +147,7 @@ footer {
   background-position: 50% 80%;
   background-size: cover;
   justify-content: center;
+  transition: 0.4s;
 }
 
 #servicediv3:hover {
@@ -146,14 +157,8 @@ footer {
   background-position: 50% 80%;
   background-size: cover;
   justify-content: center;
-}
-
-#servicediv3 {
-  background-image: url("https://www.yourbigsky.com/wp-content/uploads/sites/101/2023/01/SkiResortChairlifts.jpeg?w=2560&h=1440&crop=1");
-  background-repeat: no-repeat;
-  background-position: 50% 80%;
-  background-size: cover;
-  justify-content: center;
+  transform: scale(105%);
+  box-shadow: 5px 5px 30px black;
 }
 
 @media only screen and (max-width: 800px) {
@@ -164,17 +169,41 @@ footer {
   }
 }
 
-.imgcel {
-	width: 100%;
-	height: 500px;
+/* Caricel Img  */
 
-	object-fit: cover;
+.imgcel {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* category cards  */
+
+.catImg {
+  height: 210px;
+  width: 210px;
+  object-fit: scale-down;
+  border: 2px solid #19304f;
+  padding: 0.5rem;
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+
+.catImg:hover {
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(105%);
+  border: 2px solid #89cff0;
+}
+
+#catCard {
+  text-decoration: none;
+  color: black;
 }
 
 .modal-header {
-	background-color: var(--airSuperiority);
-	color: var(--light);
-	border: none;
+  background-color: var(--airSuperiority);
+  color: var(--light);
+  border: none;
 }
 
 .modal h5 {
@@ -222,13 +251,13 @@ footer {
 }
 
 .modal span {
-	background-color: var(--lightColumbia);
-	border: none;
+  background-color: var(--lightColumbia);
+  border: none;
 }
 
 .form-control:focus {
-	border-color: black;
-	box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 8px var(--gold);
+  border-color: black;
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 8px var(--gold);
 }
 
 .pass-card {
@@ -247,3 +276,41 @@ footer {
 	color: black;
 }
 
+
+/* PRODUCT PAGE CSS */
+
+#mainProImg {
+  height: 100%;
+  width: auto;
+  object-fit: scale-down;
+}
+
+#mainImgCas {
+  height: 600px;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  height: 120px;
+  min-width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.wrapper span {
+  width: 100%;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper span.num {
+  font-size: 50px;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
