@@ -4,6 +4,7 @@ const seedCategory = require("./categorySeed");
 const seedProduct = require("./productSeed");
 const seedOrder = require("./orderSeed");
 const seedOrderProduct = require("./orderproductSeed");
+const seedResortInfo = require("./resortInfoSeed");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -13,6 +14,7 @@ const seedAll = async () => {
   await seedProduct();
   await seedOrder();
   await seedOrderProduct();
+  await seedResortInfo();
 
   process.exit(0);
 };
