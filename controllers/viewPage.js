@@ -59,6 +59,7 @@ router.get("*", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get("/productPage", async (req, res) => {
   try {
     res.render("productPage");
