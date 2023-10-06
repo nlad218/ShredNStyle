@@ -351,3 +351,20 @@ footer {
 .nav-item button:hover {
 	color: var(--gold) !important;
 }
+
+.bio-card {
+	background-color: var(--prussianBlue);
+}
+
+.bio-card h4 {
+	color: var(--gold);
+}
+
+.bio-card p {
+	color: var(--light);
+}
+
+.bio-card svg {
+	color: var(--light);
+	margin: 0 1rem;
+}
