@@ -5,11 +5,9 @@ const { User, Order, OrderProduct } = require("../../models");
 router.post("/add-to-cart/:productId", async (req, res) => {
   try {
     if (!req.session.loggedIn) {
-      return res
-        .status(401)
-        .json({
-          message: "You must be logged in to add products to your cart.",
-        });
+      return res.status(401).json({
+        message: "You must be logged in to add products to your cart.",
+      });
     }
 
     const userId = req.session.userId;
@@ -55,6 +53,45 @@ router.post("/add-to-cart/:productId", async (req, res) => {
     return res
       .status(201)
       .json({ message: "Product added to cart successfully." });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+// Create a GET route to fetch the user's order and product data
+router.get("/my-orders", async (req, res) => {
+  try {
+    if (!req.session.loggedIn) {
+      return res
+        .status(401)
+        .json({ message: "You must be logged in to view your orders." });
+    }
+
+    const userId = req.session.userId;
+
+    const userOrder = await Order.findOne({
+      where: {
+        userId: userId,
+      },
+    });
+
+    if (!userOrder) {
+      return res
+        .status(404)
+        .json({ message: "Order not found for this user." });
+    }
+
+    const orderProducts = await OrderProduct.findAll({
+      where: {
+        userId: userId,
+      },
+      include: Product,
+    });
+
+    return res
+      .status(200)
+      .json({ order: userOrder, orderProducts: orderProduct });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: "Internal server error." });
