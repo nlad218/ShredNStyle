@@ -39,18 +39,28 @@ p {
   object-fit: cover;
 }
 
-.proCard {
-  border: 1px solid #19304f;
-  padding: 0.5rem;
-  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+/* products page cards */
+
+#pro {
   text-decoration: none;
   color: black;
-  transition: 0.4s;
-  border-radius: 20px;
-  margin: 2rem;
 }
 
-.proCard:hover {
+.proCardImg {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#proCard {
+  border: 1px solid #19304f;
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+  margin: 2rem;
+  height: 90%;
+}
+
+#proCard:hover {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
   transform: scale(105%);
   border: 1px solid #89cff0;

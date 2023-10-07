@@ -18,6 +18,42 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/allProducts", async (req, res) => {
+  try {
+    // Retrieve all products
+    const productsData = await Product.findAll();
+
+    // Organize products by category_id
+    const productsByCategory = {};
+
+    productsData.forEach((product) => {
+      const categoryId = product.category_id;
+      if (!productsByCategory[categoryId]) {
+        productsByCategory[categoryId] = [];
+      }
+      productsByCategory[categoryId].push(product.get({ plain: true }));
+    });
+
+    // Pass a single category ID to the template
+    const categoryId = 1;
+    const categoryId2 = categoryId === 1 ? 2 : undefined;
+    // Convert the object to an array of objects with 'category' and 'products' properties
+    const categoriesWithProducts = Object.entries(productsByCategory).map(
+      ([category, products]) => ({
+        category,
+        products,
+      })
+    );
+
+    // Render the "products" template and pass the category ID
+    res.render("products", { categoriesWithProducts, categoryId, categoryId2 });
+    console.log(categoriesWithProducts);
+    console.log(categoryId, categoryId2);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 router.get("/cart", async (req, res) => {
   try {
     res.render("cart");
@@ -31,11 +67,15 @@ router.get("/products/:category_id", async (req, res) => {
   try {
     const productsData = await Product.findAll({
       where: {
-        id: req.params.category_id,
+        category_id: req.params.category_id,
       },
     });
 
-    res.render("products");
+    const products = productsData.map((obj) => obj.get({ plain: true }));
+
+    // Render the "products" template and pass the "products" array to it
+    res.render("products", { products });
+    console.log(products);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
