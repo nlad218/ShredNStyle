@@ -224,7 +224,9 @@ footer {
 .catImg {
   height: 210px;
   width: 210px;
-  object-fit: scale-down;
+  border: 2px solid #19304f;
+  padding: 0.5rem;
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
   border: 1px solid #19304f;
   padding: 0.5rem;
   box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
@@ -235,6 +237,7 @@ footer {
 .catImg:hover {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
   transform: scale(105%);
+  border: 2px solid #89cff0;
   border: 1px solid #89cff0;
 }
 
@@ -421,4 +424,11 @@ footer {
 .bio-card svg {
   color: var(--light);
   margin: 0 1rem;
+}
+
+/* Resort Info style   */
+#resortPicture {
+  border-radius: 3%;
+  width: 35rem;
+  height: 30rem;
 }
