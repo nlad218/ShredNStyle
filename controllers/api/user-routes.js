@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, order } = require("../../models");
+const { User, Order } = require("../../models");
 const { sendVerificationEmail } = require("../../utils/sendemail.js");
 // Create a new user
 router.post("/", async (req, res) => {
@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
-    dbOrderData = await order.create({
+    dbOrderData = await Order.create({
       userID: newUser.id,
       purchaseAmt: 0,
     });
