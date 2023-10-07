@@ -1,19 +1,28 @@
-const emailjs = require("@emailjs/browser");
+const nodemailer = require("nodemailer");
 
-function sendMail() {
-	var templateParams = {
-		name: "James",
-		notes: "Check this out!",
-	};
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "ShredNStyle@gmail.com",
+    pass: "mgqh ewit lqcj fzjc",
+  },
+});
 
-	emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams).then(
-		function (response) {
-			console.log("SUCCESS!", response.status, response.text);
-		},
-		function (error) {
-			console.log("FAILED...", error);
-		}
-	);
-}
+const sendVerificationEmail = async (userEmail) => {
+  const mailOptions = {
+    from: "ShredNStyle@gmail.com",
+    to: userEmail,
+    subject: "Account Verification",
+    html: <p>Your account has been successfully sign up to ShredNStyle.com</p>,
+  };
 
-module.exports = { sendMail };
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent: ", info);
+    return true;
+  } catch (error) {
+    console.error("Error sending email: ", error);
+  }
+};
+
+module.exports = { sendVerificationEmail };

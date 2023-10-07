@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Order } = require("../../models");
-const { sendEmail } = require("../../utils/sendemail.js");
+const { sendVerificationEmail } = require("../../utils/sendemail.js");
 // Create a new user
 router.post("/", async (req, res) => {
   try {
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
       req.session.username = newUser.username;
       req.session.orderId = dbOrderData.id;
 
-      sendEmail(newUser.email);
+      sendVerificationEmail(newUser.email);
       res.redirect("/");
       // res.status(201).json(newUser);
     });
