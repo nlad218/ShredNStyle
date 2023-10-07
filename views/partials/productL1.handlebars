@@ -1,10 +1,9 @@
-
-<a href="/productPage/{{id}}" id="pro" class="col">
+<a href="/productPage/{{this.id}}" id="pro" class="col">
   <div class="card" id="proCard">
     {{! filler img }}
-    <img src="{{image}}" class="proCardImg" alt="{{name}}" />
+    <img src="{{this.image}}" class="proCardImg" alt="{{this.name}}" />
     <div class="card-body">
-      <h3>{{name}}</h3>
+      <h3>{{this.name}}</h3>
       <p class="card-text">${{price}}</p>
     </div>
   </div>
