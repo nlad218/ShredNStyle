@@ -34,24 +34,24 @@ p {
 /* PRODUCT LIST  */
 
 .productIMG {
-  height: 150px;
-  width: 100%;
-  object-fit: cover;
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .proCard {
-  border: 2px solid #19304f;
-  padding: 0.5rem;
-  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  color: black;
-  transition: 0.4s;
-  border-radius: 20px;
-  margin: 2rem;
+	border: 2px solid #19304f;
+	padding: 0.5rem;
+	box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	color: black;
+	transition: 0.4s;
+	border-radius: 20px;
+	margin: 2rem;
 }
 
 .product-card:hover {
-  color: var(--lapis);
+	color: var(--lapis);
 }
 
 #logo {
@@ -279,9 +279,9 @@ footer {
 /* passes page  */
 
 .passImg {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .pass-card {
@@ -392,4 +392,8 @@ footer {
 .bio-card svg {
 	color: var(--light);
 	margin: 0 1rem;
+}
+
+.bio-card svg:hover {
+	color: var(--gold);
 }

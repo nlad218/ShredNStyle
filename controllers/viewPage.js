@@ -1,21 +1,36 @@
 const router = require("express").Router();
 const { Category, Product, ResortInfo } = require("../models");
 
-// CREATE new user
-router.get("/", async (req, res) => {
-  try {
-    const categoriesData = await Category.findAll();
-    const categories = categoriesData.map((obj) => obj.get({ plain: true }));
-    const productsData = await Product.findAll();
-    const products = productsData.map((obj) => obj.get({ plain: true })).slice(0,6);
-    
+const checkLoggedIn = (req, res, next) => {
+	// Set the loggedIn status based on your session logic
+	res.locals.loggedIn = req.session.loggedIn || false;
+	next(); // Move on to the next middleware or route handler
+};
 
-    res.render("home", { categories, products });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-  
+router.use(checkLoggedIn);
+
+router.get("/", async (req, res) => {
+	try {
+		const categoriesData = await Category.findAll();
+		const categories = categoriesData.map((obj) => obj.get({ plain: true }));
+		const productsData = await Product.findAll();
+		const products = productsData
+			.map((obj) => obj.get({ plain: true }))
+			.slice(0, 6);
+		const loggedIn = req.session.loggedIn || false;
+
+		// Combine data and templateData into a single object
+		const templateData = {
+			loggedIn,
+			categories, // Pass categories data
+			products, // Pass products data
+		};
+
+		res.render("home", templateData);
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
 });
 
 router.get("/cart", async (req, res) => {
@@ -84,20 +99,29 @@ router.get("/resort/:state", async (req, res) => {
 });
 
 router.get("/productPage/:id", async (req, res) => {
-  try {
-    const productsData = await Product.findOne({
-      where: {
-        id: req.params.id
-      }
-    });
+	try {
+		const productsData = await Product.findOne({
+			where: {
+				id: req.params.id,
+			},
+		});
 
-    const product = productsData.get({plain: true});
-    console.log(product);
-    res.render("productPage", {product});
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+		const product = productsData.get({ plain: true });
+		console.log(product);
+		res.render("productPage", { product });
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
+});
+
+router.get("/about", async (req, res) => {
+	try {
+		res.render("about");
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
 });
 
 router.get("*", async (req, res) => {
