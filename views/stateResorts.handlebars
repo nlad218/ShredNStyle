@@ -11,6 +11,8 @@
 
           <h5 class="card-text">{{resort.description}}</h5>
 
+          <button class="weather" value="{{resort.resortName}}">
+            Check Weather</button>
           {{!-- <h2>{{getweather resort.lat resort.long}}</h2> --}}
 
         </div>
@@ -19,3 +21,4 @@
 
   {{/each}}
 </div>
+<script src="/js/weather.js"></script>
