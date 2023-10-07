@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Order } = require("../../models");
+const { User, order } = require("../../models");
 const { sendVerificationEmail } = require("../../utils/sendemail.js");
 // Create a new user
 router.post("/", async (req, res) => {
@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
-    dbOrderData = await Order.create({
+    dbOrderData = await order.create({
       userID: newUser.id,
       purchaseAmt: 0,
     });
@@ -53,9 +53,7 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+      res.status(400).json({ message: "User not found" });
       return;
     }
 
@@ -67,7 +65,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
-
+    console.log(dbUserData);
     let dbOrderData = await Order.findOne({
       where: {
         userID: dbUserData.id,
