@@ -23,21 +23,21 @@ const productData = [
     category_id: 4,
   },
   {
-    name: "Mens Burton [ak] Cyclic GORE-TEXT 2L jacket",
+    name: "Mens Burton Cyclic Jacket",
     price: 495.95,
     image:
       "https://www.burton.com/static/product/W24/10002107250_5.png?impolicy=bglt&imwidth=486",
     category_id: 2,
   },
   {
-    name: "Mens Burton [ak] Swash GORE-TEXT 2L jacket",
+    name: "Mens Burton Swash Jacket",
     price: 499.95,
     image:
       "https://www.burton.com/static/product/W24/10001110251_5.png?impolicy=bglt&imwidth=486",
     category_id: 2,
   },
   {
-    name: "Mens Burton [ak] Hover GORE-TEXT 3L jacket",
+    name: "Mens Burton Hover Jacket",
     price: 689.95,
     image:
       "https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
@@ -65,21 +65,21 @@ const productData = [
     category_id: 3,
   },
   {
-    name: "Women's Burton [ak] Embark GORE-TEXT 2L jacket",
+    name: "Women's Burton Embark Jacket",
     price: 499.95,
     image:
       "https://www.burton.com/static/product/W24/10010106001_6.png?impolicy=bglt&imwidth=486",
     category_id: 2,
   },
   {
-    name: "Women's Burton [ak] Upshift GORE-TEXT 2L jacket",
+    name: "Women's Burton Upshift Jacket",
     price: 459.95,
     image:
       "https://www.burton.com/static/product/W24/21282101001_5.png?impolicy=bglt&imwidth=486",
     category_id: 2,
   },
   {
-    name: "Women's Burton [ak] Flare GORE-TEXT 2L jacket",
+    name: "Women's Burton Flare Jacket",
     price: 689.95,
     image:
       "https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
@@ -100,14 +100,14 @@ const productData = [
     category_id: 3,
   },
   {
-    name: "Women's Burton [ak] Oven GORE-TEX Infinium Mittens",
+    name: "Women's Burton Oven GORE-TEX Infinium Mittens",
     price: 179.95,
     image:
       "https://www.burton.com/static/product/W24/23346101650_1.png?impolicy=bglt&imwidth=282",
     category_id: 3,
   },
   {
-    name: "Anon M4S Goggles (Toric) + Bonus Lens + MFI® Face Mask",
+    name: "Anon M4S Goggles + Bonus Lens + MFI® Face Mask",
     price: 319.95,
     image:
       "https://www.burton.com/static/product/W24/23578101601_2.png?impolicy=bglt&imwidth=282",
@@ -121,7 +121,7 @@ const productData = [
     category_id: 3,
   },
   {
-    name: "Anon M4S Low Bridge Fit Goggles (Toric) + Bonus Lens + MFI® Face Mask",
+    name: "Anon M4S Low Bridge Fit Goggles",
     price: 319.95,
     image:
       "https://www.burton.com/static/product/W24/23575101020_2.png?impolicy=bglt&imwidth=282",
@@ -207,7 +207,7 @@ const productData = [
     name: "Epic 4 Day Pass",
     price: 391.0,
     image:
-      "https://scene7.vailresorts.com/is/image/vailresorts/20230221_EPAS_Digital_EDPMediaCard_Web_TransparentBackground_640x1015?fmt=png-alpha&wid=374&resMode=sharp2&w=374&h=593&fit=constrain,1&dpr=on,2.625",
+      "https://scene7.vailresorts.com/is/image/vailresorts/Product_EpicLocalPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
     category_id: 1,
   },
   {
