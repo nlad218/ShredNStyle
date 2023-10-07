@@ -13,7 +13,7 @@ const sendVerificationEmail = async (userEmail) => {
     from: "ShredNStyle@gmail.com",
     to: userEmail,
     subject: "Account Verification",
-    html: <p>Your account has been successfully sign up to ShredNStyle.com</p>,
+    html: "<p>Your account has been successfully sign up to ShredNStyle.com</p>",
   };
 
   try {
