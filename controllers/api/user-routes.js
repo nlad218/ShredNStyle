@@ -53,9 +53,7 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+      res.status(400).json({ message: "User not found" });
       return;
     }
 
@@ -67,7 +65,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
-
+    console.log(dbUserData);
     let dbOrderData = await Order.findOne({
       where: {
         userID: dbUserData.id,
