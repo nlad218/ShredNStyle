@@ -4,7 +4,7 @@ const { sendVerificationEmail } = require("../../utils/sendemail.js");
 const { Op } = require("sequelize");
 
 // Create a new user
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
 	try {
 		// Check if the email already exists in the database
 		const existingUser = await User.findOne({
@@ -19,25 +19,24 @@ router.post("/", async (req, res) => {
 
 		// Create a new user
 		const newUser = await User.create({
-			username: req.body.username,
 			email: req.body.email,
+			username: req.body.username,
 			password: req.body.password,
 		});
 
-		dbOrderData = await Order.create({
-			userID: newUser.id,
-			purchaseAmt: 0,
-		});
+		// dbOrderData = await Order.create({
+		// 	userID: newUser.id,
+		// 	purchaseAmt: 0,
+		// });
 
 		req.session.save(() => {
 			req.session.loggedIn = true;
 			req.session.userId = newUser.id;
 			req.session.username = newUser.username;
-			req.session.orderId = dbOrderData.id;
+			// req.session.orderId = dbOrderData.id;
 
 			sendVerificationEmail(newUser.email);
-			res.redirect("/");
-			// res.status(201).json(newUser);
+			res.status(204).end();
 		});
 	} catch (error) {
 		console.error(error);
