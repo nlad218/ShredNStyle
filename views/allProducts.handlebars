@@ -8,13 +8,82 @@
     class="mask text-light position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
     style="background-color: rgba(0, 0, 0, 0.5)"
   >
-    <h4 class="text-center">Category Name</h4>
+    <h1 class="text-center">Passes</h1>
   </div>
 </div>
 {{! cards  }}
 <div class="container-fluid">
   <div class="row row-cols-1 row-col-md-2 row-cols-lg-3 g-2 g-lg-4">
-    {{#each products as |product|}}
+    {{#each pass as |product|}}
+        {{> productL1}}
+        {{/each}}
+  </div>
+  </div>
+  </div>
+</div>
+<div class="bg-image position-relative">
+  <img
+    src="https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW4lMjBwYW5vcmFtYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+    class="productIMG"
+    alt=""
+  />
+  <div
+    class="mask text-light position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
+    style="background-color: rgba(0, 0, 0, 0.5)"
+  >
+    <h1 class="text-center">Outerwear</h1>
+  </div>
+</div>
+{{! cards  }}
+<div class="container-fluid">
+  <div class="row row-cols-1 row-col-md-2 row-cols-lg-3 g-2 g-lg-4">
+    {{#each outerwear as |product|}}
+        {{> productL1}}
+        {{/each}}
+  </div>
+  </div>
+  </div>
+</div>
+<div class="bg-image position-relative">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/4/44/Tschima_da_Flix_Panorama.jpg"
+    class="productIMG"
+    alt=""
+  />
+  <div
+    class="mask text-light position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
+    style="background-color: rgba(0, 0, 0, 0.5)"
+  >
+    <h1 class="text-center">Accessories</h1>
+  </div>
+</div>
+{{! cards  }}
+<div class="container-fluid">
+  <div class="row row-cols-1 row-col-md-2 row-cols-lg-3 g-2 g-lg-4">
+    {{#each accessories as |product|}}
+        {{> productL1}}
+        {{/each}}
+  </div>
+  </div>
+  </div>
+</div>
+<div class="bg-image position-relative">
+  <img
+    src="https://www.mountainphotography.com/images/xl/20150617-Mount-Sneffels-Dusk-Panorama.jpg"
+    class="productIMG"
+    alt=""
+  />
+  <div
+    class="mask text-light position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
+    style="background-color: rgba(0, 0, 0, 0.5)"
+  >
+    <h1 class="text-center">Boards</h1>
+  </div>
+</div>
+{{! cards  }}
+<div class="container-fluid">
+  <div class="row row-cols-1 row-col-md-2 row-cols-lg-3 g-2 g-lg-4">
+    {{#each boards as |product|}}
         {{> productL1}}
         {{/each}}
   </div>
