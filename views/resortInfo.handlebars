@@ -31,14 +31,13 @@
           Click to search states
         </button>
         <ul class="dropdown-menu" id="resort-search">
-          {{! this is referancing the new array name, each is my for loop map method in handlebars }}
-          {{#each resorts as |resort|}}
-            <li><a class="dropdown-item" data-resort={{resort.state}}>
-                {{resort.state}}
-              </a></li>
-
-          {{/each}}
-
+            {{#each uniqueResorts}}
+              <li>
+                <a class="dropdown-item" data-resort="{{abbreviation}}">
+                  {{state}}
+                </a>
+              </li>
+            {{/each}}
         </ul>
       </div>
       <br />
