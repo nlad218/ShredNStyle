@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
 	}
 });
 
-// Login
+//login
 router.post("/login", async (req, res) => {
 	try {
 		const dbUserData = await User.findOne({
@@ -55,32 +55,32 @@ router.post("/login", async (req, res) => {
 		});
 
 		if (!dbUserData) {
-			res
-				.status(400)
-				.json({ message: "Incorrect email or password. Please try again!" });
-			return;
+			// Combine both error conditions into one response
+			return res.status(400);
 		}
 
-		const validPassword = await dbUserData.checkPassword(req.body.password);
+		const validPassword = await dbUserData.checkPassword(
+			req.body.password,
+			dbUserData.password
+		);
 
 		if (!validPassword) {
-			res
-				.status(400)
-				.json({ message: "Incorrect email or password. Please try again!" });
-			return;
+			// Combine both error conditions into one response
+			console.log(req);
+			return res.status(400);
 		}
 
 		// let dbOrderData = await Order.findOne({
-		// 	where: {
-		// 		userID: dbUserData.id,
-		// 	},
+		//     where: {
+		//         userID: dbUserData.id,
+		//     },
 		// });
 
 		// if (!dbOrderData) {
-		// 	dbOrderData = await Order.create({
-		// 		userID: dbUserData.id,
-		// 		purchaseAmt: 0,
-		// 	});
+		//     dbOrderData = await Order.create({
+		//         userID: dbUserData.id,
+		//         purchaseAmt: 0,
+		//     });
 		// }
 
 		req.session.save(() => {
