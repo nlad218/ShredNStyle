@@ -2,28 +2,31 @@ const router = require("express").Router();
 const { Category, Product, ResortInfo } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
-  res.locals.loggedIn = req.session.loggedIn || false;
-  next();
+	res.locals.loggedIn = req.session.loggedIn || false;
+	res.locals.username = req.session.username || "";
+	next();
 };
 
 router.use(checkLoggedIn);
 
 router.get("/", async (req, res) => {
-  try {
-    const categoriesData = await Category.findAll();
-    const categories = categoriesData.map((obj) => obj.get({ plain: true }));
-    const productsData = await Product.findAll();
-    const products = productsData
-      .map((obj) => obj.get({ plain: true }))
-      .slice(0, 6);
-    const loggedIn = req.session.loggedIn || false;
+	try {
+		const categoriesData = await Category.findAll();
+		const categories = categoriesData.map((obj) => obj.get({ plain: true }));
+		const productsData = await Product.findAll();
+		const products = productsData
+			.map((obj) => obj.get({ plain: true }))
+			.slice(0, 6);
+		const loggedIn = req.session.loggedIn || false;
+		const username = req.session.username || "";
 
-    // Combine data and templateData into a single object
-    const templateData = {
-      loggedIn,
-      categories,
-      products,
-    };
+		// Combine data and templateData into a single object
+		const templateData = {
+			loggedIn,
+			username,
+			categories,
+			products,
+		};
 
     res.render("home", templateData);
   } catch (err) {
