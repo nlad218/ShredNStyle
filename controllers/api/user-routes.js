@@ -14,7 +14,14 @@ router.post("/signup", async (req, res) => {
 		});
 
 		if (existingUser) {
-			return res.status(400).json({ message: "Email already in use" });
+			return res.status(409).json({ message: "Email already in use" });
+		}
+
+		// Validate the password length
+		if (req.body.password.length < 8) {
+			return res
+				.status(406)
+				.json({ message: "Password must be at least 8 characters long" });
 		}
 
 		// Create a new user

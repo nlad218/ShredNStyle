@@ -16,7 +16,7 @@ const logout = async () => {
 			setTimeout(() => {
 				// Redirect the user to the login page or any other desired page after logout.
 				document.location.replace("/");
-			}, 2000);
+			}, 1000);
 		} else {
 			alert("Failed to logout");
 		}

@@ -1,9 +1,14 @@
 // Get a reference to the form and error message elements
 const signupForm = document.getElementById("signupForm");
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
 
 // Listen for form submission
 signupForm.addEventListener("submit", async (e) => {
 	e.preventDefault();
+
+	emailError.classList.add("d-none");
+	passwordError.classList.add("d-none");
 
 	// Get form input values
 	const email = document.querySelector('input[name="signupEmail"]').value;
@@ -27,9 +32,12 @@ signupForm.addEventListener("submit", async (e) => {
 
 		if (response.ok) {
 			// Handle successful login and redirect if necessary
-			window.location.href = "/signup";
-		} else if (response.status === 400) {
-			// Show the error message
+			window.location.href = "/";
+		} else if (response.status === 409) {
+			emailError.classList.remove("d-none");
+		} else if (response.status === 406) {
+			passwordError.classList.remove("d-none");
+		} else {
 			alert("Failed to signup!");
 		}
 	} catch (error) {
