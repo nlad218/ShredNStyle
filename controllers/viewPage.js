@@ -139,6 +139,15 @@ router.get("/productPage/:id", async (req, res) => {
 	}
 });
 
+router.get("/about", async (req, res) => {
+	try {
+		res.render("about");
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
+});
+
 router.get("*", async (req, res) => {
 	try {
 		res.render("404");

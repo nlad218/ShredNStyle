@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Order } = require("../../models");
-const { sendEmail } = require("../../utils/sendemail.js");
+const { sendVerificationEmail } = require("../../utils/sendemail.js");
 const { Op } = require("sequelize");
 
 // Create a new user
