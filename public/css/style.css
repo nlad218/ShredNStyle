@@ -67,7 +67,7 @@ p {
 }
 
 #logo {
-  height: 150px;
+  height: 200px;
   width: auto;
 }
 
@@ -201,6 +201,13 @@ footer {
     font-size: 2rem;
   }
 }
+
+/* #homeBackround {
+  background-image: url("https://travelnevada.com/wp-content/uploads/2020/07/TN_heros_WinterSports_Landingdesktop-hero-opt.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 100%;
+} */
 
 /* Caricel Img  */
 
@@ -350,6 +357,61 @@ footer {
 
 #mainImgCas {
   height: 600px;
+}
+
+/* PRODUCT PAGE BUTTON */
+
+.proPageButton {
+  margin: 1rem;
+  text-decoration: none;
+  min-width: 300px;
+  min-height: 60px;
+  font-family: "Kanit", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #19304f;
+  background: rgb(255, 239, 0);
+  background: linear-gradient(
+    90deg,
+    rgb(215, 209, 120) 0%,
+    rgba(255, 239, 0, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 10px 10px 20px #d2b02a;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+.proPageButton::before {
+  content: "";
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid rgb(255, 239, 0);
+  box-shadow: 0 0 60px rgb(215, 209, 120);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.proPageButton:hover,
+.proPageButton:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.proPageButton:hover::before,
+.proPageButton:focus::before {
+  opacity: 1;
 }
 
 .wrapper {
