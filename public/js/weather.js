@@ -36,3 +36,14 @@ function fetchWeatherData(city) {
     },
   });
 }
+
+
+// Attach the event listener to a parent element
+document.querySelector(".row").addEventListener("click", function(e) {
+  // Check if the clicked element has the class "weather"
+  if (e.target.classList.contains("weather")) {
+    const cityName = e.target.value;
+    console.log(cityName);
+    // Call the getWeather function here or perform any other action
+  }
+});

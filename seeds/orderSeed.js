@@ -5,12 +5,12 @@ const orderData = [
   {
     purchaseDate: new Date("10/2/2023"),
     purchaseAmt: 549.95,
-    userID: 1
+    userID: 1,
   },
   {
     purchaseDate: new Date("10/5/2023"),
     purchaseAmt: 249.95,
-    userID: 2
+    userID: 2,
   },
 ];
 

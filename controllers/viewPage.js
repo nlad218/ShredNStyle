@@ -33,6 +33,20 @@ router.get("/", async (req, res) => {
 	}
 });
 
+router.get("/allProducts", async (req, res) => {
+	try {
+		// Retrieve all products
+		const productsData = await Product.findAll();
+		const products = productsData.map((obj) => obj.get({ plain: true }));
+		// Organize products by category_id
+		res.render("allProducts", { products });
+		console.log(products);
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
+});
+
 router.get("/cart", async (req, res) => {
 	try {
 		res.render("cart");
@@ -42,9 +56,19 @@ router.get("/cart", async (req, res) => {
 	}
 });
 
-router.get("/products", async (req, res) => {
+router.get("/products/:category_id", async (req, res) => {
 	try {
-		res.render("products");
+		const productsData = await Product.findAll({
+			where: {
+				category_id: req.params.category_id,
+			},
+		});
+
+		const products = productsData.map((obj) => obj.get({ plain: true }));
+
+		// Render the "products" template and pass the "products" array to it
+		res.render("products", { products });
+		console.log(products);
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
@@ -109,15 +133,6 @@ router.get("/productPage/:id", async (req, res) => {
 		const product = productsData.get({ plain: true });
 		console.log(product);
 		res.render("productPage", { product });
-	} catch (err) {
-		console.log(err);
-		res.status(500).json(err);
-	}
-});
-
-router.get("/about", async (req, res) => {
-	try {
-		res.render("about");
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
