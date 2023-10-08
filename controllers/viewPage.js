@@ -3,6 +3,7 @@ const { Category, Product, ResortInfo } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
 	res.locals.loggedIn = req.session.loggedIn || false;
+	res.locals.username = req.session.username || "";
 	next();
 };
 
@@ -17,10 +18,12 @@ router.get("/", async (req, res) => {
 			.map((obj) => obj.get({ plain: true }))
 			.slice(0, 6);
 		const loggedIn = req.session.loggedIn || false;
+		const username = req.session.username || "";
 
 		// Combine data and templateData into a single object
 		const templateData = {
 			loggedIn,
+			username,
 			categories,
 			products,
 		};
