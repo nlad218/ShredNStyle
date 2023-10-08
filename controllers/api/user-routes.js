@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
 
 		if (!dbUserData) {
 			// Combine both error conditions into one response
-			return res.status(400);
+			return res.status(400).end();
 		}
 
 		const validPassword = await dbUserData.checkPassword(
@@ -67,7 +67,7 @@ router.post("/login", async (req, res) => {
 		if (!validPassword) {
 			// Combine both error conditions into one response
 			console.log(req);
-			return res.status(400);
+			return res.status(400).end();
 		}
 
 		// let dbOrderData = await Order.findOne({
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
 			req.session.username = dbUserData.username;
 			// req.session.orderId = dbOrderData.id;
 
-			res.redirect("/");
+			res.status(204).end();
 		});
 	} catch (err) {
 		console.log(err);
