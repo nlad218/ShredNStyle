@@ -2,9 +2,8 @@ const router = require("express").Router();
 const { Category, Product, ResortInfo } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
-	// Set the loggedIn status based on your session logic
 	res.locals.loggedIn = req.session.loggedIn || false;
-	next(); // Move on to the next middleware or route handler
+	next();
 };
 
 router.use(checkLoggedIn);
@@ -22,8 +21,8 @@ router.get("/", async (req, res) => {
 		// Combine data and templateData into a single object
 		const templateData = {
 			loggedIn,
-			categories, // Pass categories data
-			products, // Pass products data
+			categories,
+			products,
 		};
 
 		res.render("home", templateData);

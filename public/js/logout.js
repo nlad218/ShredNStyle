@@ -7,10 +7,17 @@ const logout = async () => {
 		});
 
 		if (response.ok) {
-			// Redirect the user to the login page or any other desired page after logout.
-			document.location.replace("/");
+			// Show the Bootstrap modal when logout is successful
+			const modal = document.getElementById("logoutModal");
+			const modalInstance = new bootstrap.Modal(modal);
+			modalInstance.show();
+
+			// Optionally, add a delay before redirecting
+			setTimeout(() => {
+				// Redirect the user to the login page or any other desired page after logout.
+				document.location.replace("/");
+			}, 2000);
 		} else {
-			// Handle logout failure, e.g., by displaying an error message.
 			alert("Failed to logout");
 		}
 	} catch (error) {
