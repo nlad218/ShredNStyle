@@ -6,8 +6,9 @@ const productData = [
 		price: 549.95,
 		image:
 			"https://www.burton.com/static/product/W24/10712110000_6ML.png?impolicy=bglt&imwidth=486",
-		short_desc: "",
-		long_desc: "",
+		short_desc: "ALL MOUNTAIN SNOWBOARD",
+		long_desc:
+			"Channel the effortless style of Burton rider Mark McMorris with this twin shape that's tuned to pack power when you need it. The men's Burton Process Snowboard, with the coveted panda graphic, is Mark McMorris' pick for its twin freestyle playfulness and all-terrain prowess. This lift-off ready deck has you covered with plenty of pop and the floaty ease of our Flying V bend.",
 		category_id: 4,
 	},
 	{
@@ -15,8 +16,9 @@ const productData = [
 		price: 639.95,
 		image:
 			"https://www.burton.com/static/product/W24/13219109000_6ML.png?impolicy=bglt&imwidth=486",
-		short_desc: "",
-		long_desc: "",
+		short_desc: "The Right Gear for the Perfect Ride",
+		long_desc:
+			"Open your minds, sheeple, the mountain is a canvas and the snowboard is your paintbrush. The Burton Free Thinker Snowboard is built with a poppy camber profile and carbon boosted layup to get your creative juices flowing and find the tricks less traveled. It has all the energy you need to flow around the mountain jibbing, playing, and creating your masterpiece.",
 		category_id: 4,
 	},
 	{
@@ -24,8 +26,9 @@ const productData = [
 		price: 1799.95,
 		image:
 			"https://www.burton.com/static/product/W24/23913100000_6ML.png?impolicy=bglt&imwidth=486",
-		short_desc: "",
-		long_desc: "",
+		short_desc: "ALL MOUNTAIN / POWDER SNOWBOARD",
+		long_desc:
+			"We spend a lot of time poking around Vermont's tight trees and icy lines, so we built the Burton Family Tree Hometown Hero Snowboard to blast through it all. It's a daily driver with a build and materials worthy of the Family Tree name. The directional shape has enough taper to float the nose on deeper days, while the board's directional camber and flex maintain the pop to keep it lively in all conditions and terrain.",
 		category_id: 4,
 	},
 	{
