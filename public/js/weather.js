@@ -17,8 +17,8 @@ async function fetchWeatherData(city) {
 			const data = {
 				name: resortData.resortName,
 				state: resortData.state,
-				lat: resortData.lat,
-				long: resortData.long,
+				lat: parseFloat(resortData.lat),
+				long: parseFloat(resortData.long),
 			};
 
 			console.log(data);
