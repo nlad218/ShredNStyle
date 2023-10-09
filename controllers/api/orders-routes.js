@@ -1,8 +1,14 @@
 const router = require("express").Router();
-const { User, Order, OrderProduct } = require("../../models");
+const {
+  User,
+  Order,
+  OrderProduct,
+  Product,
+  UserProduct,
+} = require("../../models");
 
 // Create a POST route for adding a product/pass to the user's cart
-router.post("/add-to-cart/:productId", async (req, res) => {
+router.post("/cart/:productId", async (req, res) => {
   try {
     if (!req.session.loggedIn) {
       return res.status(401).json({
@@ -12,49 +18,47 @@ router.post("/add-to-cart/:productId", async (req, res) => {
 
     const userId = req.session.userId;
 
-    const productId = req.params.productId;
-
+    const product_id = req.params.productId;
     const user = await User.findByPk(userId);
 
-    const product = await Product.findByPk(productId);
+    const product = await Product.findByPk(product_id);
 
+    console.log(user.id, product_id)
     if (!user || !product) {
       return res.status(404).json({ message: "User or product not found." });
     }
 
-    const orderProduct = await OrderProduct.create({
-      userId: user.id,
-      productId: product.id,
+    const userProduct = await UserProduct.create({
+      user_id: user.id,
+      product_id: product.id,
     });
 
-    const cartItems = await OrderProduct.findAll({
-      where: {
-        userId: user.id,
-      },
-      include: Product,
-    });
+    // const cartItems = await UserProduct.findAll({
+    //   where: {
+    //     user_id: user.id,
+    //   },
+    //   include: Product,
+    // });
 
     let total = 0;
-    for (const item of cartItems) {
-      total += item.Product.price;
-    }
+    total = req.body.quantity * product.price;
 
-    await Order.update(
-      {
-        purchaseAmt: total,
-      },
-      {
-        where: {
-          userId: user.id,
-        },
-      }
-    );
+    // await Order.upsert(
+    //   {
+    //     purchaseAmt: total,
+    //   },
+    //   {
+    //     where: {
+    //       userId: user.id,
+    //     },
+    //   }
+    // );
 
     return res
       .status(201)
       .json({ message: "Product added to cart successfully." });
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     return res.status(500).json({ message: "Internal server error." });
   }
 });
