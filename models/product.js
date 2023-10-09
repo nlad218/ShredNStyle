@@ -26,7 +26,7 @@ Product.init(
 			isUrl: true,
 		},
 		short_desc: {
-			type: DataTypes.STRING,
+			type: DataTypes.TEXT,
 			allowNull: false,
 		},
 		long_desc: {
