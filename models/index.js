@@ -4,7 +4,7 @@ const Category = require("./categories");
 const Order = require("./orders");
 const OrderProduct = require("./orderproduct");
 const ResortInfo = require("./ResortInfo");
-const Reviews = require("./reviews");
+const Reviews = require("./reviews")
 
 Product.belongsTo(Category, { foreignKey: "category_id" });
 

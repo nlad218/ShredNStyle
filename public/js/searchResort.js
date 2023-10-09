@@ -13,6 +13,10 @@ document
   .querySelector("#resort-search")
   .addEventListener("click", resortDetail);
 
+
+
+
+  
 // Adding an event listener that triggers when the whole html is loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Retrieve all elements with the class 'dropdown-item'

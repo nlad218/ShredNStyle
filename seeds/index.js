@@ -5,7 +5,7 @@ const seedProduct = require("./productSeed");
 const seedOrder = require("./orderSeed");
 const seedOrderProduct = require("./orderproductSeed");
 const seedResortInfo = require("./resortInfoSeed");
-const seedReviewData = require("./reviews");
+// const seedReviewData = require("./reviewsSeed");
 
 const seedAll = async () => {
 	await sequelize.sync({ force: true });
