@@ -1,49 +1,54 @@
-function fetchWeatherData(city) {
-  var apiKey = "key";
-  var weatherContainer = $("#weatherRow");
+async function fetchWeatherData(city) {
+	var apiKey = "Key";
+	var url = `api.openweathermap.org/data/2.5/forecast/daily?`;
 
-  $.ajax({
-    type: "GET",
-    url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`,
-    async: true,
-    dataType: "json",
-    success: function (data) {
-      var forecastHtml = `<h2>5-Day Weather Forecast in ${city}</h2><div class="forecast-container d-flex flex-nowrap overflow-auto">`;
+	try {
+		// Make a fetch request to your login route with JSON data
+		const response = await fetch(`/api/resortInfo?resort=${city}`, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json", // Specify JSON content type
+			},
+		});
 
-      for (var i = 0; i < data.list.length; i += 8) {
-        var forecast = data.list[i];
-        forecastHtml += `
-            <div class="card m-2" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Date/Time: ${forecast.dt_txt}</h5>
-                <p class="card-text">Temperature: ${forecast.main.temp.toFixed(
-                  2
-                )}°F</p> <!-- Display temperature in Fahrenheit -->
-                <p class="card-text">Weather: ${
-                  forecast.weather[0].description
-                }</p>
-                <p class="card-text">Humidity: ${forecast.main.humidity}%</p>
-              </div>
-            </div>
-          `;
-      }
+		if (response.ok) {
+			const resortData = await response.json();
 
-      forecastHtml += "</div>";
-      weatherContainer.html(forecastHtml);
-    },
-    error: function (xhr, status, err) {
-      console.error(`Error fetching weather data for ${city}: ${err}`);
-    },
-  });
+			const data = {
+				name: resortData.resortName,
+				state: resortData.state,
+				lat: resortData.lat,
+				long: resortData.long,
+			};
+
+			console.log(data);
+
+			// const weatherResponse = await fetch(
+			// 	`${url}lat=${data.lat}&lon=${data.long}&cnt=14&appid=${apiKey}`,
+			// 	{
+			// 		method: "GET",
+			// 		headers: {
+			// 			"Content-Type": "application/json", // Specify JSON content type
+			// 		},
+			// 	}
+			// );
+
+			// console.log(weatherResponse);
+		} else {
+			console.error("Error:", response.status);
+		}
+	} catch (error) {
+		console.error("An error occurred:", error);
+	}
 }
 
-
 // Attach the event listener to a parent element
-document.querySelector(".row").addEventListener("click", function(e) {
-  // Check if the clicked element has the class "weather"
-  if (e.target.classList.contains("weather")) {
-    const cityName = e.target.value;
-    console.log(cityName);
-    // Call the getWeather function here or perform any other action
-  }
+document.querySelector(".row").addEventListener("click", function (e) {
+	// Check if the clicked element has the class "weather"
+	if (e.target.classList.contains("weather")) {
+		e.preventDefault();
+		const cityName = e.target.value;
+		// Call the getWeather function here or perform any other action
+		fetchWeatherData(cityName);
+	}
 });
