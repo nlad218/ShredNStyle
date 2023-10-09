@@ -320,13 +320,15 @@ footer {
 	color: var(--light);
 }
 
-.pass-card button {
+.pass-card button,
+.pass-card a {
 	border: none;
 	background-color: var(--gold);
 	color: black;
 }
 
-.pass-card button:hover {
+.pass-card button:hover,
+.pass-card a:hover {
 	background-color: var(--lightGold);
 	color: black;
 }
@@ -489,4 +491,15 @@ footer {
 
 #passwordReqIcon:hover + #passwordReqMessage {
 	display: block !important;
+}
+
+#passBackBtn {
+	border: none;
+	background-color: var(--gold);
+	color: black;
+}
+
+#passBackBtn:hover {
+	background-color: var(--lightGold);
+	color: black;
 }

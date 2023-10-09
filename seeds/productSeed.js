@@ -171,20 +171,20 @@ const productData = [
 	},
 	{
 		name: "Ikon Pass",
-		price: 1300.59,
+		price: 1259.99,
 		image: "https://i.ytimg.com/vi/fjkfDw7S23M/maxresdefault.jpg",
 		category_id: 1,
 	},
 	{
 		name: "Ikon Base Pass",
-		price: 1000.0,
+		price: 929.9,
 		image:
 			"https://snowbrains.com/wp-content/uploads/2018/11/Snowbrains-IKON-map-min.jpg",
 		category_id: 1,
 	},
 	{
 		name: "Ikon 4 Day Pass",
-		price: 500.0,
+		price: 469.99,
 		image:
 			"https://dancedric.com/wp-content/uploads/2021/08/ikonPass_BlueMountain.jpg",
 		category_id: 1,
@@ -198,23 +198,23 @@ const productData = [
 	},
 	{
 		name: "Epic Local Pass",
-		price: 705.0,
+		price: 705.99,
 		image:
 			"https://scene7.vailresorts.com/is/image/vailresorts/Product_EpicLocalPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
 		category_id: 1,
 	},
 	{
 		name: "Epic 4 Day Pass",
-		price: 391.0,
+		price: 391.99,
 		image:
 			"https://scene7.vailresorts.com/is/image/vailresorts/Product_EpicLocalPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
 		category_id: 1,
 	},
 	{
 		name: "The Ken Pass",
-		price: 5001.99,
+		price: 5000,
 		image:
-			"https://media.istockphoto.com/id/1198840013/vector/ski-pass-icon-simple-design.jpg?s=612x612&w=0&k=20&c=371VKcVIH3RgKKg2X3--yiptVYYsfvBE3Y7jRNqmUaM=",
+			"https://www.felizmodern.com/cdn/shop/files/ken_800x.jpg?v=1683577016",
 		category_id: 1,
 	},
 	{
