@@ -162,7 +162,7 @@ const resortInfo = [
 		resortName: "Deer Valley Resort",
 		lat: "40.6226",
 		long: "111.4851",
-		number: 43564910001,
+		number: 3564910001,
 		address: "2250 Deer Valley Dr S, Park City, UT 84060",
 		description:
 			"Spread over six mountains and featuring up to 3,000 vertical feet of elevation change, Deer Valley Resort offers nearly 70 miles of mountain bike trails, including four flow trails designed by Gravity Logic.",
@@ -232,7 +232,7 @@ const resortInfo = [
 		resortName: "Alyeska Resort",
 		lat: "60.976086",
 		long: "-149.123871",
-		number: 18008803880,
+		number: 8008803880,
 		address: "1000 Arlberg Ave, Girdwood, AK 99587",
 		description: `Alyeska Resort is Alaskas premier year-round destination featuring over 300-rooms, many fine dining experiences, a saltwater pool, ski mountain and bike park along with the new Nordic Spa. Whether summer or winter, Alyeska is the perfect base camp for endless adventure and relaxation.`,
 	},
