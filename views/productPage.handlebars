@@ -1,4 +1,5 @@
 <h1 class="ms-5 mt-3">{{product.name}}</h1>
+<input type="hidden" value="{{product.id}}" id="product-id" />
 
 <h2 class="ms-5">A very short description/ or not maybe not</h2>
 
@@ -74,7 +75,7 @@
 </div>
 
 <div class="wrap d-flex flex-column align-items-center text-aline-center">
-  <a href="/cart" class="proPageButton text-center"><span>To Cart</span></a>
+  <button id="addcartbtn" class="proPageButton text-center"><span>Add to Cart</span></button>
   <a href="/allProducts" class="proPageButton text-center"><span>Continue
       Shopping</span></a>
 </div>
@@ -118,3 +119,5 @@
         {{/each}}
   </div>
 </div>
+<script src="/js/cart.js"></script>
+<script src="/js/quantityButton.js"></script>
