@@ -113,29 +113,8 @@
 <div class="text-center my-5">
   <h2>Related Products</h2>
   <div class="mt-5 d-flex justify-content-around">
-    <a href="#" id="catCard" class="col">
-      <img
-        src="https://www.burton.com/static/product/W22/10691108000142_1.png"
-        class="catImg"
-        alt="{{category_name}}"
-      />
-      <h3>A Snow Board</h3>
-    </a>
-    <a href="#" id="catCard" class="col">
-      <img
-        src="https://www.burton.com/static/product/W22/10691108000142_1.png"
-        class="catImg"
-        alt="A Snow Board"
-      />
-      <h3>A Snow Board</h3>
-    </a>
-    <a href="#" id="catCard" class="col">
-      <img
-        src="https://www.burton.com/static/product/W22/10691108000142_1.png"
-        class="catImg"
-        alt="A Snow Board"
-      />
-      <h3>A Snow Board</h3>
-    </a>
+     {{#each similar as |products |}}
+        {{> simProducts}}
+        {{/each}}
   </div>
 </div>

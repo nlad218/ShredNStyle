@@ -58,6 +58,11 @@ router.get("/allProducts", async (req, res) => {
         category_id: 4,
       },
     });
+    const skiData = await Product.findAll({
+      where: {
+        category_id: 5,
+      },
+    });
 
     const pass = passData.map((product) => product.get({ plain: true }));
     const outerwear = outerData.map((product) => product.get({ plain: true }));
@@ -65,9 +70,10 @@ router.get("/allProducts", async (req, res) => {
       product.get({ plain: true })
     );
     const boards = boardsData.map((product) => product.get({ plain: true }));
+    const skis = skiData.map((product) => product.get({ plain: true }));
 
     // Render the "allpass" template and pass the filtered pass
-    res.render("allproducts", { pass, outerwear, accessories, boards });
+    res.render("allproducts", { pass, outerwear, accessories, boards, skis });
     console.log(pass);
   } catch (err) {
     console.log(err);
@@ -157,7 +163,7 @@ router.get("/productPage/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    
+
     const product = productsData.get({ plain: true });
 
     const simData = await Product.findAll({
@@ -166,11 +172,9 @@ router.get("/productPage/:id", async (req, res) => {
       },
     });
 
-    const similar = simData
-      .map((obj) => obj.get({ plain: true }))
-      .slice(0, 3);
+    const similar = simData.map((obj) => obj.get({ plain: true })).slice(0, 3);
     console.log(product, similar);
-    res.render("productPage", { product });
+    res.render("productPage", { product, similar });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
