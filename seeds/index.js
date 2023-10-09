@@ -16,7 +16,7 @@ const seedAll = async () => {
 	await seedOrder();
 	await seedOrderProduct();
 	await seedResortInfo();
-	await seedReviewData();
+	// await seedReviewData();
 
 	process.exit(0);
 };
