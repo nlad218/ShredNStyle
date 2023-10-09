@@ -47,3 +47,25 @@ document.querySelector(".row").addEventListener("click", function(e) {
     // Call the getWeather function here or perform any other action
   }
 });
+
+
+
+const locationData = {
+  lat: lat,
+  long: long
+};
+
+try {
+    const response = await fetch("/api/resoretInfo/")
+method: "GET"
+
+
+
+
+
+
+
+
+} catch (error) {
+  
+}

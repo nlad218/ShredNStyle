@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { ResortInfo } = require("../../models");
 
-router.get("/resorts", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const resortData = await ResortInfo.findAll();
     res.status(200).json(resortData);
@@ -10,7 +10,7 @@ router.get("/resorts", async (req, res) => {
   }
 });
 
-router.get("/resorts/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const resortData = await ResortInfo.findByPk(req.params.id);
     res.status(200).json(resortData);
