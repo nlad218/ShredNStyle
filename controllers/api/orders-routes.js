@@ -19,24 +19,23 @@ router.post("/cart/:productId", async (req, res) => {
     const userId = req.session.userId;
 
     const product_id = req.params.productId;
-    const user = await User.findByPk(userId);
+    // const user = await User.findByPk(userId);
 
     const product = await Product.findByPk(product_id);
 
-    console.log(user.id, product_id);
-    if (!user || !product) {
+    if (!userId || !product) {
       return res.status(404).json({ message: "User or product not found." });
     }
-    
+
     let userProduct = await UserProduct.findOne({
       where: {
-        user_id: user.id,
+        user_id: userId,
         product_id: product.id,
       },
     });
     if (!userProduct) {
       userProduct = await UserProduct.create({
-        user_id: user.id,
+        user_id: userId,
         product_id: product.id,
         quantity: req.body.quantity,
       });
@@ -62,7 +61,9 @@ router.post("/cart/:productId", async (req, res) => {
 router.delete("/cart/:productId", async (req, res) => {
   try {
     if (!req.session.loggedIn) {
-      return res.status(401).json({ message: "You must be logged in to modify your cart." });
+      return res
+        .status(401)
+        .json({ message: "You must be logged in to modify your cart." });
     }
 
     const userId = req.session.userId;
@@ -82,13 +83,12 @@ router.delete("/cart/:productId", async (req, res) => {
 
     await userProduct.destroy();
 
-    res.status(204).end(); 
+    res.status(204).end();
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ message: "Internal server error." });
   }
 });
-
 
 // Create a GET route to fetch the user's order and product data
 router.get("/my-orders", async (req, res) => {
