@@ -503,3 +503,18 @@ footer {
 	background-color: var(--lightGold);
 	color: black;
 }
+
+.resortCard {
+	background-color: var(--prussianBlue);
+	color: var(--light);
+}
+
+.resortCard button {
+	background-color: var(--gold);
+	color: black;
+}
+
+.resortCard button:hover {
+	background-color: var(--airSuperiority);
+	color: White;
+}

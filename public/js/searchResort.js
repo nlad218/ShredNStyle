@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		{ state: "Vermont", abbreviation: "VT" },
 		{ state: "Washington", abbreviation: "WA" },
 		{ state: "West Virginia", abbreviation: "WV" },
-		{ state: "Wisconsin", abbreviation: "VI" },
+		{ state: "Wisconsin", abbreviation: "WI" },
 		{ state: "Wyoming", abbreviation: "WY" },
 	];
 
