@@ -1,23 +1,35 @@
 async function fetchWeatherData(city) {
   try {
-    // Make a fetch request to your login route with JSON data
     const response = await fetch(`/api/resortInfo?resort=${city}`, {
       method: "GET",
       headers: {
-        "Content-Type": "application/json", // Specify JSON content type
+        "Content-Type": "application/json",
       },
     });
     if (response.ok) {
       const resortData = await response.json();
+      console.log(resortData);
 
-      const data = {
-        name: resortData.resortName,
-        state: resortData.state,
-        lat: parseFloat(resortData.lat),
-        long: parseFloat(resortData.long),
-      };
+      // Create a new element for each piece of data I would like
+      const h2el = document.createElement("h2");
+      h2el.textContent = resortData.temp;
 
-      console.log(data);
+      const h3el = document.createElement("h3");
+      h3el.textContent = resortData.main;
+
+      const h4el = document.createElement("h4");
+      const iconImg = document.createElement("img");
+      iconImg.src = `http://openweathermap.org/img/w/${resortData.icon}.png`; // Use the icon code to generate the icon URL
+      h4el.appendChild(iconImg);
+
+      const h5el = document.createElement("h5");
+      h5el.textContent = resortData.description;
+
+      // Find the corresponding button element for the city
+      const buttonEl = document.querySelector(`button[value="${city}"]`);
+
+      // Replace the button element with the weather data
+      buttonEl.replaceWith(h2el, h3el, h4el, h5el);
     } else {
       console.error("Error:", response.status);
     }
@@ -26,27 +38,10 @@ async function fetchWeatherData(city) {
   }
 }
 
-// Attach the event listener to a parent element
 document.querySelector(".row").addEventListener("click", function (e) {
-  // Check if the clicked element has the class "weather"
   if (e.target.classList.contains("weather")) {
     e.preventDefault();
     const cityName = e.target.value;
-    // Call the getWeather function here or perform any other action
     fetchWeatherData(cityName);
-    weatherResponse();
   }
 });
-
-// const apiKey =
-
-async function weatherResponse() {
-  await fetch(`${url}lat=${data.lat}&lon=${data.long}&cnt=14&appid=${apiKey}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json", // Specify JSON content type
-    },
-  });
-}
-
-console.log(weatherResponse);

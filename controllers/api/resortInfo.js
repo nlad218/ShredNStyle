@@ -21,16 +21,22 @@ router.get("/", async (req, res) => {
     if (!resortData) {
       return res.status(404).json({ error: "Resort not found" });
     }
-    console.log(
-      `${url}lat=${resortData.lat}&lon=${resortData.long}&units=imperial&appid=${process.env.WEATHER_API_KEY}`
-    );
+    // console.log(
+    //   `${url}lat=${resortData.lat}&lon=${resortData.long}&units=imperial&appid=${process.env.WEATHER_API_KEY}`
+    // );
     const weatherResponse = await axios.get(
       `${url}lat=${resortData.lat}&lon=${resortData.long}&units=imperial&appid=${process.env.WEATHER_API_KEY}`
     );
-    const cleanWeather = {};
 
+    const cleanWeather = {
+      main: weatherResponse.data.weather[0].main,
+      description: weatherResponse.data.weather[0].description,
+      icon: weatherResponse.data.weather[0].icon,
+      temp: weatherResponse.data.main.temp,
+    };
     console.log(cleanWeather);
-    res.status(200).json(weatherResponse.data); // Send resortData as JSON in the response
+
+    res.status(200).json(cleanWeather); // Send resortData as JSON in the response
   } catch (error) {
     console.error("Error querying the database:", error);
     return res.status(500).json({ error: "Internal server error" });
