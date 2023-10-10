@@ -42,7 +42,7 @@ router.post("/signup", async (req, res) => {
       req.session.username = newUser.username;
       // req.session.orderId = dbOrderData.id;
 
-      // sendVerificationEmail(newUser.email);
+      sendVerificationEmail(newUser.email);
       res.status(204).end();
     });
   } catch (error) {
@@ -59,7 +59,7 @@ router.post("/login", async (req, res) => {
         [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
       },
     });
-	console.log(dbUserData)
+    console.log(dbUserData);
     if (!dbUserData) {
       // Combine both error conditions into one response
       return res.status(400).end();
