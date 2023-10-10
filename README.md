@@ -51,8 +51,8 @@ If you want to see more of my work please visit me at [JakeZook](https://github.
 
 Mitchell Morgan
 If you have any questions please email me at mitchemorgan@gmail.com
-If you want to see more of my work please visit me at [/M1TCH3llM](https://github.com//M1TCH3llM)
+If you want to see more of my work please visit me at [M1TCH3llM](https://github.com/M1TCH3llM)
 
 Dallas Thompson
 If you have any questions please email me at
-If you want to see more of my work please visit me at [](https://github.com/DallasThompson)
+If you want to see more of my work please visit me at [DallasThompson](https://github.com/DallasThompson)
