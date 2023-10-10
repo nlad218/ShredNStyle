@@ -27,22 +27,13 @@ router.post("/cart/:productId", async (req, res) => {
     if (!user || !product) {
       return res.status(404).json({ message: "User or product not found." });
     }
-
-    let userProduct = await UserProduct.findOne({
+    
+    const userProduct = await UserProduct.create({
       user_id: user.id,
-      product_id: product.id,
-    });
-    if (!userProduct) {
-      userProduct = await UserProduct.create({
-        user_id: user.id,
-        product_id: product.id,
-        quantity: req.body.quantity,
-      });
-    } else {
-      await userProduct.update({
-        quantity: userProduct.quantity + req.body.quantity,
-      });
-    }
+      product_id: product.id, 
+      quantity: req.body.quantity,
+    })
+    
     // const cartItems = await UserProduct.findAll({
     //   where: {
     //     user_id: user.id,
