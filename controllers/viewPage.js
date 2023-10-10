@@ -112,6 +112,46 @@ router.get("/cart", async (req, res) => {
   }
 });
 
+// router.get("/cart", async (req, res) => {
+//   try {
+//     const cartItemData = await UserProduct.findAll({
+//       where: { user_id: req.sesssion.userId },
+//     });
+//     const cartItems = cartItemData.map((item) => item.get({ plain: true }));
+//     const productIds = cartItems.map((item) => item.product_id);
+//     const productData = await Product.findAll({
+//       where: {
+//         id: { [Op.in]: productIds },
+//       },
+//     });
+//     const productsInCart = productData.map((item) => item.get({ plain: true }));
+
+//     const reducedCart = cartItems.reduce((accumulator, current) => {
+//       console.log("current", current);
+//       const { product_id, quntity } = current;
+
+//       if (!accumulator[(product_id, quantity)]) {
+//         accumulator[product_id] = { product_id, quantity };
+//       } else {
+//         accumulator[product_id].quantity += quantity;
+//       }
+
+//       return accumulator;
+//       // }, {});
+//     });
+//     const uniqueProdcuts = Object.values(reducedCart);
+
+//     uniqueProdcuts.forEach((item, i) => {
+//       productsInCart[i].quantity = item.quantity;
+//     });
+//     console.log(productsInCart);
+//     res.render("cart", productsInCart);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get("/products/:category_id", async (req, res) => {
   try {
     const productsData = await Product.findAll({
@@ -202,17 +242,27 @@ router.get("/productPage/:id", async (req, res) => {
       },
     });
 
+    const renderRating = () => {
+      const star = "⭐️";
+      const newObj = star.repeat(product.rating);
+      return newObj;
+    };
+
+    rating = renderRating();
+
+    // console.log(productsData);
+
     const review = revData.map((obj) => {
       const newObj = obj.get({ plain: true });
       const star = "🏂";
       newObj.stars = star.repeat(newObj.stars);
-      console.log(newObj);
+      // console.log(newObj);
       return newObj;
     });
 
     const similar = simData.map((obj) => obj.get({ plain: true })).slice(0, 3);
     // console.log(product, similar, review);
-    res.render("productPage", { product, similar, review });
+    res.render("productPage", { product, similar, review, rating });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
