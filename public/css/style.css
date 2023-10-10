@@ -53,7 +53,7 @@ p {
 }
 
 .skiCardImg {
-  height: 300px;
+  height: 500px;
   width: 100%;
   object-fit: contain;
   margin-top: 5px;
@@ -71,6 +71,10 @@ p {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
   transform: scale(105%);
   border: 1px solid #89cff0;
+}
+
+.procardpp {
+  margin-bottom: 2rem;
 }
 
 #logo {
@@ -124,6 +128,22 @@ footer {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
   transform: scale(105%);
   border: 1px solid #89cff0;
+}
+
+.topCard {
+  margin: 0 5px;
+  height: 200px;
+}
+
+@media only screen and (min-width: 770px) {
+  .topCard {
+    height: 120px;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .topCard {
+    height: 150px;
+  }
 }
 
 /* bottom home page buttons */
@@ -206,6 +226,9 @@ footer {
 @media only screen and (max-width: 800px) {
   #servicediv {
     font-size: 2rem;
+  }
+  .procardpp {
+    margin-bottom: 1;
   }
 }
 
