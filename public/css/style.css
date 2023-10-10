@@ -572,3 +572,39 @@ footer {
 	background-color: var(--airSuperiority);
 	color: White;
 }
+
+/* //////////////////////////// CART //////////////////////////////// */
+
+.cartInItem {
+  height: auto;
+  width: 70%;
+  border: 1px solid #19304f;
+  margin: 1rem;
+  text-align: end;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #19304f;
+}
+
+.cartImg {
+  height: 200px;
+  width: 200px;
+  object-fit: scale-down;
+  margin: 1rem;
+}
+
+.cartText {
+  margin: 2rem;
+}
+
+.cartInItem a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.cartTotal {
+  margin: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #313133;
+  width: 70%;
+}
