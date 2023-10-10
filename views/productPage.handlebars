@@ -1,7 +1,7 @@
 <h1 class="ms-5 mt-3">{{product.name}}</h1>
 <input type="hidden" value="{{product.id}}" id="product-id" />
 
-<h2 class="ms-5">A very short description/ or not maybe not</h2>
+<h2 class="ms-5">{{product.short_desc}}</h2>
 
 <div class="d-flex justify-content-start">
   <h4 class="ms-5">Review</h4>
@@ -81,13 +81,8 @@
 </div>
 
 <div class="mx-5">
-  <h3>Long Description</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quam
-    aliquid? Officia voluptas eligendi odio similique facere vel, illo repellat
-    tenetur. Maxime accusamus inventore, eum totam accusantium velit illum odio
-    sint similique temporibus repudiandae quia aspernatur dolorum corporis nemo.
-    Mollitia nostrum laudantium ea, laboriosam ipsum sequi. Consequatur
-    assumenda et alias.</p>
+  <h3>{{product.name}}</h3>
+  <p>{{product.long_desc}}</p>
 </div>
 
 <div class="mx-5 mt-5">
