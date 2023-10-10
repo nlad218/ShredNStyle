@@ -103,9 +103,16 @@ router.get("/cart", async (req, res) => {
     const productsInCart = productData.map((item) => item.get({ plain: true }));
     cartItems.forEach((item, i) => {
       productsInCart[i].quantity = item.quantity;
+      productsInCart[i].totalPrice = item.quantity * productsInCart[i].price;
     });
+
+    // Calculate the total cart price
+    const totalCartPrice = productsInCart.reduce((total, product) => {
+      return total + product.totalPrice;
+    }, 0);
+
     console.log(productsInCart, "hi im here1");
-    res.render("cart", { productsInCart });
+    res.render("cart", { productsInCart, totalCartPrice });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
