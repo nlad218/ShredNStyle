@@ -23,7 +23,7 @@ router.post("/cart/:productId", async (req, res) => {
 
     const product = await Product.findByPk(product_id);
 
-    console.log(user.id, product_id)
+    console.log(user.id, product_id);
     if (!user || !product) {
       return res.status(404).json({ message: "User or product not found." });
     }
@@ -31,6 +31,7 @@ router.post("/cart/:productId", async (req, res) => {
     const userProduct = await UserProduct.create({
       user_id: user.id,
       product_id: product.id,
+      quantity: req.body.quantity,
     });
 
     // const cartItems = await UserProduct.findAll({

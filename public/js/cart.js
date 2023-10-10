@@ -25,7 +25,8 @@ for (let i = 0; i < cart.length; i++) {
 
 const handleAddToCart = async (e) => {
   const product_id = document.getElementById("product-id").value;
-  const quantity = document.querySelector(".num").value;
+  const quantity = parseInt(document.querySelector(".num").innerText);
+  console.log(quantity);
   const response = await fetch(`/api/orders/cart/${product_id}`, {
     method: "POST",
 
