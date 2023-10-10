@@ -30,7 +30,7 @@ const reviewData = [
 	},
 	{
 		review: "Great board just a little too stiff",
-		name: "robin",
+		name: "Robin",
 		stars: 4,
 		product_id: 2,
 	},
@@ -43,7 +43,7 @@ const reviewData = [
 	},
 	{
 		review:
-			"amazing board, had lots of boards in my life, by far my favorite. tears up pow, and has a great edge for high speed groomers",
+			"Amazing board, had lots of boards in my life, by far my favorite. tears up pow, and has a great edge for high speed groomers",
 		name: "Bryce",
 		stars: 5,
 		product_id: 3,
@@ -202,8 +202,9 @@ const reviewData = [
 		product_id: 10,
 	},
 	{
-		review: "Sofia",
-		name: "I love the color and fitting. I ordered a small and it fits great. I’m 5ft 5in, 128lbs. Nicely tapered at the waist but enough room for layers and sleeves are the perfect length.",
+		review:
+			"I love the color and fitting. I ordered a small and it fits great. I’m 5ft 5in, 128lbs. Nicely tapered at the waist but enough room for layers and sleeves are the perfect length.",
+		name: "Sofia",
 		stars: 5,
 		product_id: 11,
 	},
@@ -277,7 +278,7 @@ const reviewData = [
 	},
 	{
 		review:
-			"great quality, color although the fit is a little tight i wear a size small and would like them a little looser but definitely a good buy!",
+			"Great quality, color although the fit is a little tight i wear a size small and would like them a little looser but definitely a good buy!",
 		name: "Vasileia",
 		stars: 4,
 		product_id: 14,
