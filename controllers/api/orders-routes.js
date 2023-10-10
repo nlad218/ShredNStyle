@@ -29,8 +29,10 @@ router.post("/cart/:productId", async (req, res) => {
     }
 
     let userProduct = await UserProduct.findOne({
-      user_id: user.id,
-      product_id: product.id,
+      where: {
+        user_id: user.id,
+        product_id: product.id,
+      },
     });
     if (!userProduct) {
       userProduct = await UserProduct.create({
