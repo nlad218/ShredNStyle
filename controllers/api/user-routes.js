@@ -31,16 +31,11 @@ router.post("/signup", async (req, res) => {
       password: req.body.password,
     });
 
-    // dbOrderData = await Order.create({
-    // 	userID: newUser.id,
-    // 	purchaseAmt: 0,
-    // });
-
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.userId = newUser.id;
       req.session.username = newUser.username;
-      // req.session.orderId = dbOrderData.id;
+
 
       sendVerificationEmail(newUser.email);
       res.status(204).end();
@@ -59,7 +54,6 @@ router.post("/login", async (req, res) => {
         [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
       },
     });
-    console.log(dbUserData);
     if (!dbUserData) {
       // Combine both error conditions into one response
       return res.status(400).end();
@@ -72,33 +66,19 @@ router.post("/login", async (req, res) => {
 
     if (!validPassword) {
       // Combine both error conditions into one response
-      console.log(req);
+
       return res.status(400).end();
     }
-
-    // let dbOrderData = await Order.findOne({
-    //     where: {
-    //         userID: dbUserData.id,
-    //     },
-    // });
-
-    // if (!dbOrderData) {
-    //     dbOrderData = await Order.create({
-    //         userID: dbUserData.id,
-    //         purchaseAmt: 0,
-    //     });
-    // }
 
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.userId = dbUserData.dataValues.id;
       req.session.username = dbUserData.dataValues.username;
-      // req.session.orderId = dbOrderData.id;
 
       res.status(204).end();
     });
   } catch (err) {
-    console.log(err);
+
     res.status(500).json(err);
   }
 });

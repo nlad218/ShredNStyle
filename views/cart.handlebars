@@ -5,12 +5,6 @@
       {{#each productsInCart as |product|}}
         {{> cartItems}}
         {{/each}}
-      {{!-- <div>
-        <img src="{{productsInCart.image}}" alt="{{productsInCart.name}}" />
-        <a href="/productPage/{{productsInCart.id}}">{{productsInCart.name}}</a>
-        <h4>{{productsInCart.sort_desc}}</h4>
-        <h2>{{productsInCart.price}}</h2>
-      </div> --}}
     </div>
     <div class="text-center d-flex flex-column align-items-center">
       <div class="row cartTotal">
@@ -21,4 +15,3 @@
     </div>
   </div>
 </main>
-{{! <script src="/js/cart.js"></script>  }}
