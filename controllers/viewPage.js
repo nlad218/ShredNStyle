@@ -1,6 +1,12 @@
 const router = require("express").Router();
 const { Op } = require("sequelize");
-const { Category, Product, ResortInfo, UserProduct } = require("../models");
+const {
+  Category,
+  Product,
+  ResortInfo,
+  UserProduct,
+  Reviews,
+} = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
   res.locals.loggedIn = req.session.loggedIn || false;
@@ -222,15 +228,41 @@ router.get("/productPage/:id", async (req, res) => {
 
     const product = productsData.get({ plain: true });
 
+    const revData = await Reviews.findAll({
+      where: {
+        product_id: product.id,
+      },
+
+      attributes: ["review", "name", "stars"],
+    });
+
     const simData = await Product.findAll({
       where: {
         category_id: product.category_id,
       },
     });
 
+    const renderRating = () => {
+      const star = "⭐️";
+      const newObj = star.repeat(product.rating);
+      return newObj;
+    };
+
+    rating = renderRating();
+
+    // console.log(productsData);
+
+    const review = revData.map((obj) => {
+      const newObj = obj.get({ plain: true });
+      const star = "🏂";
+      newObj.stars = star.repeat(newObj.stars);
+      // console.log(newObj);
+      return newObj;
+    });
+
     const similar = simData.map((obj) => obj.get({ plain: true })).slice(0, 3);
-    console.log(product, similar);
-    res.render("productPage", { product, similar });
+    // console.log(product, similar, review);
+    res.render("productPage", { product, similar, review, rating });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
