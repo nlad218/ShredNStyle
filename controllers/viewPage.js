@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const { Category, Product, ResortInfo } = require("../models");
+const { Op } = require("sequelize");
+const { Category, Product, ResortInfo, UserProduct } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
   res.locals.loggedIn = req.session.loggedIn || false;
@@ -83,7 +84,22 @@ router.get("/allProducts", async (req, res) => {
 
 router.get("/cart", async (req, res) => {
   try {
-    res.render("cart");
+    const cartItemData = await UserProduct.findAll({
+      where: { user_id: req.session.userId },
+    });
+    const cartItems = cartItemData.map((item) => item.get({ plain: true }));
+    const productIds = cartItems.map((item) => item.product_id);
+    const productData = await Product.findAll({
+      where: {
+        id: { [Op.in]: productIds },
+      },
+    });
+    const productsInCart = productData.map((item) => item.get({ plain: true }));
+    cartItems.forEach((item, i) => {
+      productsInCart[i].quantity = item.quantity;
+    });
+
+    res.render("cart", productsInCart);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
