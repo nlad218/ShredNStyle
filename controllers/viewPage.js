@@ -7,6 +7,7 @@ const {
   UserProduct,
   Reviews,
 } = require("../models");
+const withAuth = require("../utils/auth.js")
 
 const checkLoggedIn = (req, res, next) => {
   res.locals.loggedIn = req.session.loggedIn || false;
@@ -88,7 +89,7 @@ router.get("/allProducts", async (req, res) => {
   }
 });
 
-router.get("/cart", async (req, res) => {
+router.get("/cart", withAuth, async (req, res) => {
   try {
     const cartItemData = await UserProduct.findAll({
       where: { user_id: req.session.userId },
@@ -111,7 +112,6 @@ router.get("/cart", async (req, res) => {
       return total + product.totalPrice;
     }, 0);
 
-    console.log(productsInCart, "hi im here1");
     res.render("cart", { productsInCart, totalCartPrice });
   } catch (err) {
     console.log(err);
