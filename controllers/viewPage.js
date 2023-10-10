@@ -104,53 +104,13 @@ router.get("/cart", async (req, res) => {
     cartItems.forEach((item, i) => {
       productsInCart[i].quantity = item.quantity;
     });
-
-    res.render("cart", productsInCart);
+    console.log(productsInCart, "hi im here1");
+    res.render("cart", { productsInCart });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
-// router.get("/cart", async (req, res) => {
-//   try {
-//     const cartItemData = await UserProduct.findAll({
-//       where: { user_id: req.sesssion.userId },
-//     });
-//     const cartItems = cartItemData.map((item) => item.get({ plain: true }));
-//     const productIds = cartItems.map((item) => item.product_id);
-//     const productData = await Product.findAll({
-//       where: {
-//         id: { [Op.in]: productIds },
-//       },
-//     });
-//     const productsInCart = productData.map((item) => item.get({ plain: true }));
-
-//     const reducedCart = cartItems.reduce((accumulator, current) => {
-//       console.log("current", current);
-//       const { product_id, quntity } = current;
-
-//       if (!accumulator[(product_id, quantity)]) {
-//         accumulator[product_id] = { product_id, quantity };
-//       } else {
-//         accumulator[product_id].quantity += quantity;
-//       }
-
-//       return accumulator;
-//       // }, {});
-//     });
-//     const uniqueProdcuts = Object.values(reducedCart);
-
-//     uniqueProdcuts.forEach((item, i) => {
-//       productsInCart[i].quantity = item.quantity;
-//     });
-//     console.log(productsInCart);
-//     res.render("cart", productsInCart);
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
 
 router.get("/products/:category_id", async (req, res) => {
   try {
