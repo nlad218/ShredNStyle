@@ -34,7 +34,10 @@ const handleAddToCart = async (e) => {
 		headers: { "Content-Type": "application/json" },
 	});
 	if (response.ok) {
-		document.location.assign("/cart");
+		var addedToCartModal = new bootstrap.Modal(
+			document.getElementById("addedToCartModal")
+		);
+		addedToCartModal.show();
 	} else {
 		var loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
 		loginModal.show();
