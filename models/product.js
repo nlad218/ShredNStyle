@@ -5,49 +5,49 @@ const Category = require("./categories");
 class Product extends Model {}
 
 Product.init(
-	{
-		id: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-			primaryKey: true,
-			autoIncrement: true,
-		},
-		name: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
-		price: {
-			type: DataTypes.DECIMAL,
-			allowNull: false,
-		},
-		image: {
-			type: DataTypes.STRING,
-			allowNull: false,
-			isUrl: true,
-		},
-		rating: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-		},
-		short_desc: {
-			type: DataTypes.TEXT,
-			allowNull: false,
-		},
-		long_desc: {
-			type: DataTypes.TEXT,
-			allowNull: false,
-		},
-		category_id: {
-			type: DataTypes.INTEGER,
-			references: { model: "category", key: "id" },
-		},
-	},
-	{
-		sequelize,
-		freezeTableName: true,
-		underscored: true,
-		modelName: "product",
-	}
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isUrl: true,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    short_desc: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    long_desc: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: { model: "category", key: "id" },
+    },
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "product",
+  }
 );
 
 module.exports = Product;

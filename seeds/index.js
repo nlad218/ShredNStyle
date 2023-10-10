@@ -10,13 +10,13 @@ const seedReviewData = require("./reviewsSeed");
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedUser();
-  await seedCategory();
-  await seedProduct();
-  await seedOrder();
-  await seedOrderProduct();
-  await seedResortInfo();
-  await seedReviewData();
+	await seedUser();
+	await seedCategory();
+	await seedProduct();
+	await seedOrder();
+	await seedOrderProduct();
+	await seedResortInfo();
+	await seedReviewData();
 
   process.exit(0);
 };
