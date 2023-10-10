@@ -12,42 +12,46 @@ Product.belongsTo(Category, { foreignKey: "category_id" });
 Category.hasMany(Product);
 
 Order.belongsToMany(Product, {
-  foreignKey: "order_id",
-  through: OrderProduct,
+	foreignKey: "order_id",
+	through: OrderProduct,
 });
 
 Product.belongsToMany(Order, {
-  foreignKey: "product_id",
-  through: OrderProduct,
+	foreignKey: "product_id",
+	through: OrderProduct,
 });
 
 User.hasMany(
-  Order
-  // , { foreignKey: "customer_id" }
+	Order
+	// , { foreignKey: "customer_id" }
 );
 
 Order.belongsTo(
-  User
-  // , { foreignKey: "customer_id" }
+	User
+	// , { foreignKey: "customer_id" }
 );
 
 User.belongsToMany(Product, {
-  foreignKey: "user_id",
-  through: {model: UserProduct, unique: false}
+	foreignKey: "user_id",
+	through: { model: UserProduct, unique: false },
 });
 
 Product.belongsToMany(User, {
-  foreignKey: "product_id",
-  through: {model: UserProduct, unique: false}
+	foreignKey: "product_id",
+	through: { model: UserProduct, unique: false },
 });
 
+Reviews.belongsTo(Product, { foreignKey: "product_id" });
+
+Product.hasMany(Reviews);
+
 module.exports = {
-  User,
-  Category,
-  Product,
-  Order,
-  OrderProduct,
-  ResortInfo,
-  Reviews,
-  UserProduct,
+	User,
+	Category,
+	Product,
+	Order,
+	OrderProduct,
+	ResortInfo,
+	Reviews,
+	UserProduct,
 };

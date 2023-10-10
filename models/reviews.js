@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection.js");
+const Product = require("./product.js");
 
 class Reviews extends Model {}
 
@@ -22,6 +23,11 @@ Reviews.init(
 		stars: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
+		},
+		product_id: {
+			type: DataTypes,
+			INTEGER,
+			references: { model: "product", key: "id" },
 		},
 	},
 	{
