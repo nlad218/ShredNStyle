@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { Category, Product, ResortInfo } = require("../models");
 const { Op } = require("sequelize");
 const { Category, Product, ResortInfo, UserProduct } = require("../models");
 
