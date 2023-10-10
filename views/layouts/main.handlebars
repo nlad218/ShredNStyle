@@ -1,293 +1,339 @@
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Shred'N Style</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kanit:wght@200&family=Rajdhani:wght@300&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="/Winter-Sports-/public/js/index.js">
 
-	</head>
-	<body>
-		{{! Nav Bar }}
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="container-fluid">
-				<a
-					class="navbar-brand"
-					style="font-family: Dela Gothic One, sans-serif;"
-					href="/"
-				>Shred'N Style</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item ms-lg-2 d-flex aline-content-center">
-							<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-							<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Shred'N Style</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kanit:wght@200&family=Rajdhani:wght@300&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="/Winter-Sports-/public/js/index.js">
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+		integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+	{{! Nav Bar }}
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" style="font-family: Dela Gothic One, sans-serif;" href="/">Shred'N Style</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item ms-lg-2 d-flex aline-content-center">
+						<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+							fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+							<path
+								d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+						</svg>
+						<a class="nav-link active" aria-current="page" href="/"> Home</a>
+					</li>
+					<li class="nav-item  d-flex aline-content-center">
+						<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+							fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+							<path
+								d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+						</svg>
+						<a class="nav-link" href="/resort">Resort info</a>
+					</li>
+					<li class="nav-item ms-lg-2 d-flex aline-content-center">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-snow align-self-center m-1" viewBox="0 0 16 16">
+							<path
+								d="M8 16a.5.5 0 0 1-.5-.5v-1.293l-.646.647a.5.5 0 0 1-.707-.708L7.5 12.793V8.866l-3.4 1.963-.496 1.85a.5.5 0 1 1-.966-.26l.237-.882-1.12.646a.5.5 0 0 1-.5-.866l1.12-.646-.884-.237a.5.5 0 1 1 .26-.966l1.848.495L7 8 3.6 6.037l-1.85.495a.5.5 0 0 1-.258-.966l.883-.237-1.12-.646a.5.5 0 1 1 .5-.866l1.12.646-.237-.883a.5.5 0 1 1 .966-.258l.495 1.849L7.5 7.134V3.207L6.147 1.854a.5.5 0 1 1 .707-.708l.646.647V.5a.5.5 0 1 1 1 0v1.293l.647-.647a.5.5 0 1 1 .707.708L8.5 3.207v3.927l3.4-1.963.496-1.85a.5.5 0 1 1 .966.26l-.236.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.883.237a.5.5 0 1 1-.26.966l-1.848-.495L9 8l3.4 1.963 1.849-.495a.5.5 0 0 1 .259.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.236.883a.5.5 0 1 1-.966.258l-.495-1.849-3.4-1.963v3.927l1.353 1.353a.5.5 0 0 1-.707.708l-.647-.647V15.5a.5.5 0 0 1-.5.5z" />
+						</svg>
+						<a class="nav-link" href="/passes"> Passes</a>
+					</li>
+					<li class="nav-item ms-lg-2 d-flex aline-content-center">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-bag align-self-center m-1" viewBox="0 0 16 16">
+							<path
+								d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+						</svg>
+						<a class="nav-link" href="/allProducts"> Shop</a>
+					</li>
+					<li class="nav-item ms-lg-2 d-flex aline-content-center">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-info-circle align-self-center m-1" viewBox="0 0 16 16">
+							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+							<path
+								d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+						</svg>
+						<a class="nav-link" href="/about"> About</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					{{#if loggedIn}}
+					<li class="nav-item dropdown d-flex align-items-center">
+						<a class="nav-link dropdown-toggle" href="#" id="greetingDropdown" role="button"
+							data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+								fill="currentColor" class="bi bi-person-circle m-1" viewBox="0 0 16 16">
+								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+								<path fill-rule="evenodd"
+									d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
 							</svg>
-							<a class="nav-link active" aria-current="page" href="/">	Home</a>
-						</li>
-						<li class="nav-item  d-flex aline-content-center">
-							<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
-							<path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z"/>
-							</svg>
-							<a class="nav-link" href="/resort">Resort info</a>
-						</li>
-						<li class="nav-item ms-lg-2 d-flex aline-content-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-snow align-self-center m-1" viewBox="0 0 16 16">
-							<path d="M8 16a.5.5 0 0 1-.5-.5v-1.293l-.646.647a.5.5 0 0 1-.707-.708L7.5 12.793V8.866l-3.4 1.963-.496 1.85a.5.5 0 1 1-.966-.26l.237-.882-1.12.646a.5.5 0 0 1-.5-.866l1.12-.646-.884-.237a.5.5 0 1 1 .26-.966l1.848.495L7 8 3.6 6.037l-1.85.495a.5.5 0 0 1-.258-.966l.883-.237-1.12-.646a.5.5 0 1 1 .5-.866l1.12.646-.237-.883a.5.5 0 1 1 .966-.258l.495 1.849L7.5 7.134V3.207L6.147 1.854a.5.5 0 1 1 .707-.708l.646.647V.5a.5.5 0 1 1 1 0v1.293l.647-.647a.5.5 0 1 1 .707.708L8.5 3.207v3.927l3.4-1.963.496-1.85a.5.5 0 1 1 .966.26l-.236.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.883.237a.5.5 0 1 1-.26.966l-1.848-.495L9 8l3.4 1.963 1.849-.495a.5.5 0 0 1 .259.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.236.883a.5.5 0 1 1-.966.258l-.495-1.849-3.4-1.963v3.927l1.353 1.353a.5.5 0 0 1-.707.708l-.647-.647V15.5a.5.5 0 0 1-.5.5z"/>
-							</svg>
-							<a class="nav-link" href="/passes">	Passes</a>
-						</li>
-						<li class="nav-item ms-lg-2 d-flex aline-content-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag align-self-center m-1" viewBox="0 0 16 16">
-							<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-							</svg>
-							<a class="nav-link" href="/allProducts">	Shop</a>
-						</li>
-						<li class="nav-item ms-lg-2 d-flex aline-content-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle align-self-center m-1" viewBox="0 0 16 16">
-							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-							<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-							</svg>
-							<a class="nav-link" href="/about">	About</a>
-						</li>
+							<span id="greetingText">Hello, {{username}}</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="greetingDropdown">
+							<a class="dropdown-item" id="logout-button" href="#">Logout</a>
+						</div>
+					</li>
+					{{else}}
+					<li class="nav-item d-flex align-items-center">
+						<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+							fill="currentColor" class="bi bi-person-circle m-1" viewBox="0 0 16 16">
+							<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+							<path fill-rule="evenodd"
+								d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+						</svg>
+						<button type="button" class="login nav-link" data-bs-toggle="modal"
+							data-bs-target="#loginModal">
+							Login / Signup
+						</button>
+					</li>
+					{{/if}}
+					<li class="nav-item d-flex align-items-center">
+						<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+							fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+							<path
+								d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+						</svg>
+						<a class="nav-link" href="/cart">Cart</a>
+					</li>
+				</ul>
+				<!-- Search form -->
+
+				{{!-- <select data-placeholder="Search for something!" class="chosen-select" multiple="" tabindex="-1"
+					style="display: none;">
+					<option value=""></option>
+					<optgroup label="Snowboards">
+						<option>Flying V</option>
+						<option>Deep thinker</option>
+						<option>Hometown Hero</option>
+					</optgroup>
+				</select>
+				<div class="chosen-container chosen-container-multi" title="" style="width: 350px; text-align:center">
+					<ul class="chosen-choices">
+						<div class="search-field">
+							<input class="chosen-search-input default" type="text" autocomplete="off"
+								value="Search for something!" tabindex="6" style="width: 186.875px;">
+						</div>
 					</ul>
-					<ul class="navbar-nav ml-auto">
-						{{#if loggedIn}}
-						<li class="nav-item dropdown d-flex align-items-center">
-							<a class="nav-link dropdown-toggle" href="#" id="greetingDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle m-1" viewBox="0 0 16 16">
-									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-									<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-								</svg>
-								<span id="greetingText">Hello, {{username}}</span>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="greetingDropdown">
-								<a class="dropdown-item" id="logout-button" href="#">Logout</a>
-							</div>
-						</li>
-						{{else}}
-							<li class="nav-item d-flex align-items-center">
-								<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle m-1" viewBox="0 0 16 16">
-									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-									<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-								</svg>
-								<button
-									type="button"
-									class="login nav-link"
-									data-bs-toggle="modal"
-									data-bs-target="#loginModal"
-								>
-									Login / Signup
-								</button>
+					<div class="chosen-drop">
+						<ul class="chosen-results"></ul>
+					</div>
+				</div> --}}
+				<form class="d-flex align-content-center ms-2 m-0" role="search">
+					<input class="form-control chosen-select" id="search" type="search" placeholder="Search" aria-label="Search" />
+					<button class="btn ms-2 btn-outline-success" id="searchBtn" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<main>
+		{{{body}}}
+		<!-- Login/Sign Up Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header d-flex flex-column-reverse">
+						<h5 class="modal-title" id="loginModalLabel">Login / Sign Up</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs justify-content-center mb-4" id="myTabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link border rounded active border-secondary" id="login-tab"
+									data-bs-toggle="tab" href="#login" role="tab" aria-controls="login"
+									aria-selected="true">Login</a>
 							</li>
-						{{/if}}
-						<li class="nav-item d-flex align-items-center">
-							<svg class="align-self-center m-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
-							<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-							</svg>
-							<a class="nav-link" href="/cart">Cart</a>
-						</li>
-					</ul>
-            <!-- Search form -->
-            <form class="d-flex align-content-center ms-2 m-0" role="search">
-                <input
-                    class="form-control"
-					id="search"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                />
-                <button
-                    class="btn ms-2 btn-outline-success"
-					id="searchBtn"
-                    type="submit"
-                >Search</button>
-            </form>
-				</div>
-			</div>
-		</nav>
-		<main>
-			{{{body}}}
-				<!-- Login/Sign Up Modal -->
-				<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header d-flex flex-column-reverse">
-								<h5 class="modal-title" id="loginModalLabel">Login / Sign Up</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<!-- Nav tabs -->
-								<ul class="nav nav-tabs justify-content-center mb-4" id="myTabs" role="tablist">
-									<li class="nav-item" role="presentation">
-										<a class="nav-link border rounded active border-secondary" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
-									</li>
-									<li class="nav-item" role="presentation">
-										<a class="nav-link border rounded border-secondary" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
-									</li>
-								</ul>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link border rounded border-secondary" id="signup-tab" data-bs-toggle="tab"
+									href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
+							</li>
+						</ul>
 
-								<!-- Tab panes -->
-								<div class="tab-content" id="myTabContent">
-									<!-- Login Tab -->
-									<div class="tab-pane fade show active text-center" id="login" role="tabpanel" aria-labelledby="login-tab">
-										<form id="loginForm" class="mx-auto">
-											<h3 class="mb-2">Welcome back!</h3>
-											<h6 id="loginError" class="d-none" style="color: red;">Incorrect username or password!</h6>
-											<div class="mb-3 text-start">
-												<label for="loginEmail"  class="form-label">Email address or Username:</label>
-												<div class="input-group">
-													<span class="input-group-text">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-															<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-														</svg>
-													</span>
-													<input type="text" name="email" class="form-control" placeholder="Enter your email or username">
-												</div>
-											</div>
-											<div class="mb-3 text-start">
-												<label for="loginPassword" class="form-label">Password:</label>
-												<div class="input-group">
-													<span class="input-group-text">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
-														<path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
-														</svg>
-													</span>
-													<input type="password" class="form-control" name="password" placeholder="Enter your password">
-												</div>
-											</div>
-											<button type="submit" class="btn btn-primary">Login</button>
-										</form>
+						<!-- Tab panes -->
+						<div class="tab-content" id="myTabContent">
+							<!-- Login Tab -->
+							<div class="tab-pane fade show active text-center" id="login" role="tabpanel"
+								aria-labelledby="login-tab">
+								<form id="loginForm" class="mx-auto">
+									<h3 class="mb-2">Welcome back!</h3>
+									<h6 id="loginError" class="d-none" style="color: red;">Incorrect username or
+										password!</h6>
+									<div class="mb-3 text-start">
+										<label for="loginEmail" class="form-label">Email address or Username:</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+													<path
+														d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+												</svg>
+											</span>
+											<input type="text" name="email" class="form-control"
+												placeholder="Enter your email or username">
+										</div>
 									</div>
-									
-									<!-- Sign Up Tab -->
-									<div class="tab-pane fade text-center" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-										<form class="mx-auto" id="signupForm">
-											<h3 class="mb-2">Join the club!</h3>
-											<h6 id="emailError" class="d-none" 
-											style="color: red;">Email already in use!</h6>
-											<h6 id="passwordError" class="d-none" 
-											style="color: red;">Password does not meet requirements!</h6>
-											<div class="mb-3 text-start">
-												<label for="signupEmail" class="form-label">Email address:</label>
-												<div class="input-group">
-													<span class="input-group-text">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-															<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-														</svg>
-													</span>
-													<input name="signupEmail" type="text" class="form-control" id="signUpEmail" placeholder="Enter your email or username">
-												</div>
-											</div>
-											<div class="mb-3 text-start">
-												<label for="signupUsername" class="form-label">Username:</label>
-												<div class="input-group">
-													<span class="input-group-text">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-															<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-														</svg>
-													</span>
-													<input name="signupUsername" type="text" class="form-control" id="signUpUsername" placeholder="Enter your email or username">
-												</div>
-											</div>
-											<div class="mb-3 text-start">
-												<label for="signupPassword" class="form-label d-flex align-items-center">Password:
-													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="passwordReqIcon" class="bi bi-question-circle m-1" viewBox="0 0 16 16">
-														<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-														<path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-														<h6 class="m-0 d-none" id="passwordReqMessage"
-														style="color: #d2b02a; font-size: .75rem">Password must be at least 8 characters long!</h6>
-													</svg>
-												</label>
-												<div class="input-group">
-													<span class="input-group-text">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
-														<path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
-														</svg>
-													</span>
-													<input name="signupPassword" type="text" class="form-control" id="SignUpPassword" placeholder="Enter your email or username">
-												</div>
-											</div>
-											<button type="submit" class="btn btn-success">Sign Up</button>
-										</form>
+									<div class="mb-3 text-start">
+										<label for="loginPassword" class="form-label">Password:</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+													<path
+														d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
+												</svg>
+											</span>
+											<input type="password" class="form-control" name="password"
+												placeholder="Enter your password">
+										</div>
 									</div>
-								</div>
+									<button type="submit" class="btn btn-primary">Login</button>
+								</form>
+							</div>
+
+							<!-- Sign Up Tab -->
+							<div class="tab-pane fade text-center" id="signup" role="tabpanel"
+								aria-labelledby="signup-tab">
+								<form class="mx-auto" id="signupForm">
+									<h3 class="mb-2">Join the club!</h3>
+									<h6 id="emailError" class="d-none" style="color: red;">Email already in use!</h6>
+									<h6 id="passwordError" class="d-none" style="color: red;">Password does not meet
+										requirements!</h6>
+									<div class="mb-3 text-start">
+										<label for="signupEmail" class="form-label">Email address:</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+													<path
+														d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+												</svg>
+											</span>
+											<input name="signupEmail" type="text" class="form-control" id="signUpEmail"
+												placeholder="Enter your email or username">
+										</div>
+									</div>
+									<div class="mb-3 text-start">
+										<label for="signupUsername" class="form-label">Username:</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+													<path
+														d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+												</svg>
+											</span>
+											<input name="signupUsername" type="text" class="form-control"
+												id="signUpUsername" placeholder="Enter your email or username">
+										</div>
+									</div>
+									<div class="mb-3 text-start">
+										<label for="signupPassword"
+											class="form-label d-flex align-items-center">Password:
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+												fill="currentColor" id="passwordReqIcon"
+												class="bi bi-question-circle m-1" viewBox="0 0 16 16">
+												<path
+													d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path
+													d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+												<h6 class="m-0 d-none" id="passwordReqMessage"
+													style="color: #d2b02a; font-size: .75rem">Password must be at least
+													8 characters long!</h6>
+											</svg>
+										</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+													<path
+														d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
+												</svg>
+											</span>
+											<input name="signupPassword" type="text" class="form-control"
+												id="SignUpPassword" placeholder="Enter your email or username">
+										</div>
+									</div>
+									<button type="submit" class="btn btn-success">Sign Up</button>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h2 class="modal-title text-center mx-auto" id="logoutModalLabel" 
-								style="color: #ffef00;">Goodbye!</h2>
-							</div>
-							<div class="modal-body text-center">
-								<h2>Catch you on the mountain!</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script src="/js/login.js"></script>
-				<script src="/js/logout.js"></script>
-				<script src="/js/signup.js"></script>
 			</div>
-		</main>
-		{{!-- FOOTER  --}}
-    <footer class="d-flex justify-content-center">
-      <div class="row row-cols-1 justify-content-center row-cols-lg-3">
-        <div style="width: 200px;" class="col my-5">
-          <img id="logo" src="/images/ShrednKens.png"/>
-        </div>
-        <div class="col my-5 foot" id="about">
-          <h3 >
-            Shred'N Style
-          </h3 >
-          <h4>About</h4>
-          <p>"Shred'N Styles is your winter sports destination, carefully
-            crafted by the Shred'N Kens – a passionate team of five winter
-            enthusiasts. Explore our handpicked selection of top-tier gear and
-            fashionable apparel, designed to elevate your winter adventure. Get
-            ready to shred the slopes in style with Shred'N Styles.".</p>
-        </div>
-        <div class="col my-5 foot" style="width: 200px;">
-          <h4>Contact</h4>
-          <p>555-525-5565</p>
-          <p>shrednstyle@sherdNken.com</p>
-          <p>1234 N Ogden ave</p>
-          <p>Denver Colorado, 80031</p>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-	{{!-- <script src="/js/quantityButton.js"></script> --}}
-  </body>
+		</div>
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title text-center mx-auto" id="logoutModalLabel" style="color: #ffef00;">
+							Goodbye!</h2>
+					</div>
+					<div class="modal-body text-center">
+						<h2>Catch you on the mountain!</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/login.js"></script>
+		<script src="/js/logout.js"></script>
+		<script src="/js/signup.js"></script>
+		</div>
+	</main>
+	{{!-- FOOTER --}}
+	<footer class="d-flex justify-content-center">
+		<div class="row row-cols-1 justify-content-center row-cols-lg-3">
+			<div style="width: 200px;" class="col my-5">
+				<img id="logo" src="/images/ShrednKens.png" />
+			</div>
+			<div class="col my-5 foot" id="about">
+				<h3>
+					Shred'N Style
+				</h3>
+				<h4>About</h4>
+				<p>"Shred'N Styles is your winter sports destination, carefully
+					crafted by the Shred'N Kens – a passionate team of five winter
+					enthusiasts. Explore our handpicked selection of top-tier gear and
+					fashionable apparel, designed to elevate your winter adventure. Get
+					ready to shred the slopes in style with Shred'N Styles.".</p>
+			</div>
+			<div class="col my-5 foot" style="width: 200px;">
+				<h4>Contact</h4>
+				<p>555-525-5565</p>
+				<p>shrednstyle@sherdNken.com</p>
+				<p>1234 N Ogden ave</p>
+				<p>Denver Colorado, 80031</p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../public/js/searchBarDropdown.js"></script>
+	{{!--
+	<script src="/js/quantityButton.js"></script> --}}
+</body>
+
 </html>
