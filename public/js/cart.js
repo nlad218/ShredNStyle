@@ -36,7 +36,7 @@ const handleAddToCart = async (e) => {
   if (response.ok) {
     document.location.assign("/cart");
   } else {
-    alert("error adding to cart");
+    alert("This product is already in your cart");
   }
 };
 
