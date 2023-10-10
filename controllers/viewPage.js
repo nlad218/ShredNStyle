@@ -81,21 +81,6 @@ router.get("/allProducts", async (req, res) => {
   }
 });
 
-// router.get("/cart", async (req, res) => {
-//   try {
-//     const cartItemData = await UserProduct.findAll({
-//       where: {user_id: req.session.userId},
-//     });
-//     const cartItems = cartItemData.map((item)=> item.get({plain:true}));
-//     const productIds = cartItems.map((item)=> item.product_id);
-//     const productData = await Product.findAll({
-//       where: {
-//         id: {[Op.in]: productIds },
-//       },
-//     });
-//   }
-// });
-
 router.get("/cart", async (req, res) => {
   try {
     const cartItemData = await UserProduct.findAll({
