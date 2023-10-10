@@ -5,31 +5,22 @@
 		class="passImg"
 		alt=""
 	/>
-<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
   {{#each stateResorts as |resort|}}
-
     <div class="col">
-      <div
-        class="card"
-        style="border-radius: 15px; margin:1rem; border: 3px solid rgb(32, 31, 31)"
-      >
+      <div class="card" style="border-radius: 15px; margin:1rem; border: 3px solid rgb(32, 31, 31)" data-city="{{resort.resortName}}">
         <div class="card-body resortCard" style="min-height: 18rem; text-align:center">
           <h3 class="card-title">{{resort.resortName}}</h3>
-          <h4>Phone Number : 
-            {{formatPhoneNumber resort.number}}. 
-            </h4>
-            <h4>Address : 
-            {{resort.address}}</h4>
-
+          <h4>Phone Number: {{formatPhoneNumber resort.number}}.</h4>
+          <h4>Address: {{resort.address}}</h4>
           <h5 class="card-text">{{resort.description}}</h5>
           <br />
           <button style="box-shadow: 5px 5px 10px #ffef00;" class="weather" value="{{resort.resortName}}">
-            Check Weather</button>
-
+            Check Weather
+          </button>
         </div>
       </div>
     </div>
-
   {{/each}}
 </div>
 <script src="/js/weather.js"></script>
