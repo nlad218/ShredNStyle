@@ -59,7 +59,7 @@ var apiKey = "fd14e40bfd6c1460a77a88f01383cf1e";
 async function fetchWeatherData(city) {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${ciy}&APPID=${apiKey}`,
       {
         method: "GET",
         headers: {
@@ -86,3 +86,17 @@ document.querySelector(".row").addEventListener("click", function (e) {
     fetchWeatherData(cityName);
   }
 });
+
+// var requestWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city},us&units=imperial&APPID=6125957e3b746825efbf44ae31af7452`;
+
+// fetch(requestWeather)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+
+//     fiveDayForecast(data);
+//     saveSearch(data.name);
+//     displayWeather(data);
+//   });
