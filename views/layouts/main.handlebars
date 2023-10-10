@@ -257,15 +257,19 @@
 						</div>
 					</div>
 				</div>
-				{{!-- You must sign in modal --}}
-				<div class="modal fade" id="cartAccessModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
+				{{!-- addedToCart Modal --}}
+				<div class="modal fade" id="addedToCartModal" tabindex="-1" aria-labelledby="addedModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
 						<div class="modal-content">
-							<div class="modal-header">
-								<h2 class="modal-title text-center mx-auto" id="logoutModalLabel" 
-								style="color: #ffef00;">You must login first!</h2>
-								<button type="button" class="btn-close" data-bs-dismiss="cartAccessModal" aria-label="Close">OK</button>
+							<div class="modal-header d-flex flex-column-reverse">
+								<h2 class="modal-title text-center" id="IconModalLabel">Added to cart!</h2>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
+								<div class="modal-body text-center">
+									<a href="/cart" class="btn proPageButton">Go to Cart</a>
+									<button type="button" class="proPageButton" data-bs-dismiss="modal" aria-label="Close"
+									>Keep Shopping</button>
+								</div>
 						</div>
 					</div>
 				</div>
