@@ -30,7 +30,7 @@
         >
           Click to search states
         </button>
-        <ul class="dropdown-menu" id="resort-search">
+        <ul class="dropdown-menu" id="resort-search" style="max-height: 200px; overflow-y: auto;">
             {{#each uniqueResorts}}
               <li>
                 <a class="dropdown-item" data-resort="{{abbreviation}}">
