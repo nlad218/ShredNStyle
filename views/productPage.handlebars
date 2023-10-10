@@ -87,28 +87,13 @@
 
 <div class="mx-5 mt-5">
   <h2>Reviews</h2>
-  <div class="review">
-    <h4>Ben</h4>
-    <p>⭐️ ⭐️ ⭐️ ⭐️</p>
-    <p>It Was A Board And it Did Things</p>
-  </div>
-  <br />
-  <div class="review">
-    <h4>Justin</h4>
-    <p>⭐️ ⭐️</p>
-    <p>It's cool But I'm Not Impressed</p>
-  </div>
-  <br />
-  <div class="review">
-    <h4>Cassie</h4>
-    <p>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
-    <p>I wanted to go really fast down the mountain... and i did!</p>
-  </div>
-  <br />
+  {{#each review as |reviews|}}
+        {{> reviews}}
+        {{/each}}
 </div>
 <div class="text-center my-5">
   <h2>Related Products</h2>
-  <div class="mt-5 d-flex justify-content-around">
+  <div class="mt-5 d-flex row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-4">
      {{#each similar as |products |}}
         {{> simProducts}}
         {{/each}}
