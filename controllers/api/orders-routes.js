@@ -46,27 +46,8 @@ router.post("/cart/:productId", async (req, res) => {
       });
     }
 
-    
-    // const cartItems = await UserProduct.findAll({
-    //   where: {
-    //     user_id: user.id,
-    //   },
-    //   include: Product,
-    // });
-
     let total = 0;
     total = req.body.quantity * product.price;
-
-    // await Order.upsert(
-    //   {
-    //     purchaseAmt: total,
-    //   },
-    //   {
-    //     where: {
-    //       userId: user.id,
-    //     },
-    //   }
-    // );
 
     return res
       .status(201)
@@ -76,6 +57,38 @@ router.post("/cart/:productId", async (req, res) => {
     return res.status(500).json({ message: "Internal server error." });
   }
 });
+
+// Create a DELETE route to remove an item from the cart
+router.delete("/cart/:productId", async (req, res) => {
+  try {
+    if (!req.session.loggedIn) {
+      return res.status(401).json({ message: "You must be logged in to modify your cart." });
+    }
+
+    const userId = req.session.userId;
+
+    const productId = req.params.productId;
+
+    const userProduct = await UserProduct.findOne({
+      where: {
+        user_id: userId,
+        product_id: productId,
+      },
+    });
+
+    if (!userProduct) {
+      return res.status(404).json({ message: "Item not found in the cart." });
+    }
+
+    await userProduct.destroy();
+
+    res.status(204).end(); 
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ message: "Internal server error." });
+  }
+});
+
 
 // Create a GET route to fetch the user's order and product data
 router.get("/my-orders", async (req, res) => {
