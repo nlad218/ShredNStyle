@@ -4,7 +4,7 @@ const Product = require("./product.js");
 
 class Reviews extends Model {}
 
-Reviews.init(
+Reviews.init {
   {
     id: {
       type: DataTypes.INTEGER,

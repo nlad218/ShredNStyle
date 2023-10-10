@@ -25,6 +25,10 @@ Product.init(
 			allowNull: false,
 			isUrl: true,
 		},
+		rating: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
 		short_desc: {
 			type: DataTypes.TEXT,
 			allowNull: false,
