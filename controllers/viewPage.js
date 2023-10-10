@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { Op } = require("sequelize");
 const { Category, Product, ResortInfo, UserProduct } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
@@ -100,7 +101,6 @@ router.get("/cart", async (req, res) => {
 
     res.render("cart", productsInCart);
   } catch (err) {
-    console.log(err);
     console.log(err);
     res.status(500).json(err);
   }
