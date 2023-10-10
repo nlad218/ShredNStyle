@@ -6,6 +6,7 @@ const productData = [
 		price: 549.95,
 		image:
 			"https://www.burton.com/static/product/W24/10712110000_6ML.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc: "ALL MOUNTAIN SNOWBOARD!",
 		long_desc:
 			"Channel the effortless style of Burton rider Mark McMorris with this twin shape that's tuned to pack power when you need it. The men's Burton Process Snowboard, with the coveted panda graphic, is Mark McMorris' pick for its twin freestyle playfulness and all-terrain prowess. This lift-off ready deck has you covered with plenty of pop and the floaty ease of our Flying V bend.",
@@ -16,6 +17,7 @@ const productData = [
 		price: 639.95,
 		image:
 			"https://www.burton.com/static/product/W24/13219109000_6ML.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc: "The Right Gear for the Perfect Ride!",
 		long_desc:
 			"Open your minds, sheeple, the mountain is a canvas and the snowboard is your paintbrush. The Burton Free Thinker Snowboard is built with a poppy camber profile and carbon boosted layup to get your creative juices flowing and find the tricks less traveled. It has all the energy you need to flow around the mountain jibbing, playing, and creating your masterpiece.",
@@ -26,6 +28,7 @@ const productData = [
 		price: 1799.95,
 		image:
 			"https://www.burton.com/static/product/W24/23913100000_6ML.png?impolicy=bglt&imwidth=486",
+		rating: 5,
 		short_desc: "ALL MOUNTAIN / POWDER SNOWBOARD!",
 		long_desc:
 			"We spend a lot of time poking around Vermont's tight trees and icy lines, so we built the Burton Family Tree Hometown Hero Snowboard to blast through it all. It's a daily driver with a build and materials worthy of the Family Tree name. The directional shape has enough taper to float the nose on deeper days, while the board's directional camber and flex maintain the pop to keep it lively in all conditions and terrain.",
@@ -36,6 +39,7 @@ const productData = [
 		price: 495.95,
 		image:
 			"https://www.burton.com/static/product/W24/10002107250_5.png?impolicy=bglt&imwidth=486",
+		rating: 3,
 		short_desc: "Warm and Dry No Matter the Weather.",
 		long_desc:
 			"You've got your season pass. You can count on the men's Burton [ak] Cyclic GORE-TEX Jacket in any weather and any day of the season. Whether you're setting a boot pack or simply braving the wind on the lift, it's a warm, dry world inside the Cyclic.",
@@ -46,6 +50,7 @@ const productData = [
 		price: 499.95,
 		image:
 			"https://www.burton.com/static/product/W24/10001110251_5.png?impolicy=bglt&imwidth=486",
+		rating: 3,
 		short_desc:
 			"Shake of cold lift rides and biting winds without compromising on your mobility in the men's Burton Swash Jacket. ",
 		long_desc:
@@ -57,6 +62,7 @@ const productData = [
 		price: 689.95,
 		image:
 			"https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
+		review: 5,
 		short_desc:
 			"An ultra-lightweight, packable GORE-TEX jacket with splitboard-specific utility for the earn-your-turn crowd.",
 		long_desc:
@@ -68,6 +74,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10353109021_1.png?impolicy=bglt&imwidth=486",
+		review: 3,
 		short_desc: "Ride All Day, Any Day",
 		long_desc:
 			"We ask a lot of our hands during a day on the mountain. If you are someone who rides regardless of the weather, the men's Burton GORE-TEX Gloves are for you. They offer set-it-and-forget-it coverage that you can count on to ride day in and day out without having to worry about whether your hands can weather the weather.",
@@ -78,6 +85,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10384109021_1.png?impolicy=bglt&imwidth=486",
+		review: 4,
 		short_desc: "Ride All Day, Any Day",
 		long_desc:
 			" They offer set-it-and-forget-it coverage that you can count on to ride day in and day out without having to worry about whether your hands can weather the weather.",
@@ -88,6 +96,7 @@ const productData = [
 		price: 79.95,
 		image:
 			"https://www.burton.com/static/product/W24/10331109021_1.png?impolicy=bglt&imwidth=486",
+		review: 4,
 		short_desc: "Buckle, zip, grab. Your hands are essential",
 		long_desc:
 			"Give them the warm, dry world they deserve with the men's Burton Reverb GORE-TEX Gloves. All the tech in a durable package, so you can just keep riding and not worry about how long your hands are gonna stay comfy.",
@@ -98,6 +107,7 @@ const productData = [
 		price: 499.95,
 		image:
 			"https://www.burton.com/static/product/W24/10010106001_6.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc:
 			"Ride in Every Condition, All Season Long. Adventurous riding and backcountry days demand temperature regulation and full mobility.",
 		long_desc:
@@ -109,6 +119,7 @@ const productData = [
 		price: 459.95,
 		image:
 			"https://www.burton.com/static/product/W24/21282101001_5.png?impolicy=bglt&imwidth=486",
+		rating: 5,
 		short_desc:
 			"Ride Out Any Storm. Shrug off the weather, shift into high gear, and ride on.",
 		long_desc:
@@ -120,6 +131,7 @@ const productData = [
 		price: 689.95,
 		image:
 			"https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
+		rating: 5,
 		short_desc:
 			"Stoke Your Heater. Down heat meets proven storm protection to make snowboarding's highest performance puffy. Period.",
 		long_desc:
@@ -131,6 +143,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10395110502_1.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc: "Technical Two-in-One Warmth.",
 		long_desc:
 			"We ask a lot of hands during a day on the mountain. If you are someone who rides regardless of the weather, the women's Burton GORE-TEX Under Mittens + Gore Warm technology check all the warm, dry, and dexterous boxes with a low-profile cuff that fits under your jacket.",
@@ -141,6 +154,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10361109021_1.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc:
 			"Ride All Day, Any Day. We ask a lot of hands during a day on the mountain",
 		long_desc:
@@ -152,6 +166,7 @@ const productData = [
 		price: 179.95,
 		image:
 			"https://www.burton.com/static/product/W24/23346101650_1.png?impolicy=bglt&imwidth=282",
+		rating: 4,
 		short_desc: "Our Warmest Mittens.",
 		long_desc:
 			"When you ride regardless of the weather, you need gear you know will keep you warm and dry. The Burton [ak] Oven GORE-TEX INFINIUM™ Mittens are made for the coldest, stormiest days. You'll feel the difference as soon as you slide your hands into these mitts.",
@@ -162,6 +177,7 @@ const productData = [
 		price: 319.95,
 		image:
 			"https://www.burton.com/static/product/W24/23578101601_2.png?impolicy=bglt&imwidth=282",
+		rating: 4,
 		short_desc: "These toric-lens goggles offer our best optics.",
 		long_desc:
 			"The Anon M4S Toric Goggles feature the same high-end performance of the M4 Goggles in a frame scaled for medium-sized faces. They offer a precise helmet-to-goggle fit with the wide field of view and enhanced peripheral vision of a toric lens a frame scaled to fit smaller faces.",
@@ -172,6 +188,7 @@ const productData = [
 		price: 279.95,
 		image:
 			"https://www.burton.com/static/product/W24/19176105102_2.png?impolicy=bglt&imwidth=282",
+		rating: 4,
 		short_desc:
 			"Quick-change lens tech and a bonus lens mean you are always ready for a wide variety of conditions.",
 		long_desc:
@@ -183,6 +200,7 @@ const productData = [
 		price: 319.95,
 		image:
 			"https://www.burton.com/static/product/W24/23575101020_2.png?impolicy=bglt&imwidth=282",
+		rating: 5,
 		short_desc:
 			"Get more from your goggles with this cylindrical shape offering our highest level optics.",
 		long_desc:
@@ -194,6 +212,7 @@ const productData = [
 		price: 239.95,
 		image:
 			"https://www.burton.com/static/product/W24/22734103502_3.png?impolicy=bglt&imwidth=282",
+		rating: 4,
 		short_desc:
 			"The Logan WaveCel helmet features advanced protection with premium fit and comfort features in a low-profile, lightweight style.",
 		long_desc:
@@ -205,6 +224,7 @@ const productData = [
 		price: 319.95,
 		image:
 			"https://www.burton.com/static/product/W24/22733103100_1.png?impolicy=bglt&imwidth=282",
+		rating: 4,
 		short_desc:
 			"The Merak WaveCel is fully loaded with 19 ventilation channels, WaveCel protection, and premium comfort and fit features in a durable hybrid molded construction.",
 		long_desc:
@@ -216,6 +236,7 @@ const productData = [
 		price: 219.95,
 		image:
 			"https://www.burton.com/static/product/W24/23570101501_3.png?impolicy=bglt&imwidth=282",
+		rating: 5,
 		short_desc:
 			"Micro-adjustable fit, fleece-lined warmth, and a lightweight feel with the latest impact-absorbing safety technology.",
 		long_desc:
@@ -227,6 +248,7 @@ const productData = [
 		price: 39.95,
 		image:
 			"https://www.burton.com/static/product/W24/23811100501_1.png?impolicy=bglt&imwidth=282",
+		rating: 3,
 		short_desc: "Our do-it-all-weight neck warmer for everyday coverage.",
 		long_desc:
 			"Made for mild to cool conditions, the Anon MFI® Lightweight Neck Warmer protects your face from wind, sun, and cold. The adjustable design can be worn as neck warmer in mild conditions and pulls up for full face coverage with a seamless connection to MFI-compatible goggles in colder, stormier weather.",
@@ -237,6 +259,7 @@ const productData = [
 		price: 69.95,
 		image:
 			"https://www.burton.com/static/product/W24/23823100001_1.png?impolicy=bglt&imwidth=282",
+		rating: 1,
 		short_desc:
 			"The Anon MFI® Paneled Neck Warmer is our pinnacle neck gaiter ",
 		long_desc:
@@ -248,6 +271,7 @@ const productData = [
 		price: 59.95,
 		image:
 			"https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
+		rating: 4,
 		short_desc:
 			"Face the elements with the soft-brushed fleece feel of this neck warmer.",
 		long_desc:
@@ -258,6 +282,7 @@ const productData = [
 		name: "Ikon Pass",
 		price: 1259.99,
 		image: "https://i.ytimg.com/vi/fjkfDw7S23M/maxresdefault.jpg",
+		rating: 5,
 		short_desc: "Access to 58 unique destinations worldwide.",
 		long_desc:
 			"No blackout dates at any resort, 16 unlimited skiing and riding destinations, and up to 7 days at 41 destinations.",
@@ -268,6 +293,7 @@ const productData = [
 		price: 929.9,
 		image:
 			"https://snowbrains.com/wp-content/uploads/2018/11/Snowbrains-IKON-map-min.jpg",
+		rating: 4,
 		short_desc: "Unlimited Access to 14 destinations.",
 		long_desc:
 			"Limited blackout dates at selects resorts, up to 5 days each at select resorts, and Some lift reservations required.",
@@ -278,6 +304,7 @@ const productData = [
 		price: 469.99,
 		image:
 			"https://dancedric.com/wp-content/uploads/2021/08/ikonPass_BlueMountain.jpg",
+		rating: 4,
 		short_desc: "Up to 4 days of fun skiing or snowboarding!",
 		long_desc:
 			"Blackout dates apply to resorts, covers 41 unique destinations, and some lift reservations required.",
@@ -288,6 +315,7 @@ const productData = [
 		price: 949.99,
 		image:
 			"https://scene7.vailresorts.com/is/image/vailresorts/194551-22-EPAS-Digital_NewPassMediaCards_ALL_EmilyLopez_EpicMilitaryPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
+		rating: 4,
 		short_desc: "Unlimited access to 41 resorts!",
 		long_desc:
 			"Limited access to international resorts, includes Epic Mountain Rewards, and pass protection with Epic coverage.",
@@ -298,6 +326,7 @@ const productData = [
 		price: 705.99,
 		image:
 			"https://scene7.vailresorts.com/is/image/vailresorts/Product_EpicLocalPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
+		rating: 4,
 		short_desc: "Limited access to 29 unique resorts!",
 		long_desc:
 			"No reservations required for any resort, includes Epic Mountain Rewards, and pass protection with Epic coverage.",
@@ -308,6 +337,7 @@ const productData = [
 		price: 391.99,
 		image:
 			"https://scene7.vailresorts.com/is/image/vailresorts/Product_EpicLocalPass?fmt=png-alpha&resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625",
+		rating: 5,
 		short_desc: "Up to 4 days at 38 unique resorts!",
 		long_desc:
 			"No reservations required at any resort, includes Epic Mountain Rewards, and does not include pass protection.",
@@ -318,6 +348,7 @@ const productData = [
 		price: 5000,
 		image:
 			"https://www.felizmodern.com/cdn/shop/files/ken_800x.jpg?v=1683577016",
+		rating: 5,
 		short_desc: "Ski or snowboard literally anywhere!",
 		long_desc:
 			"Allows you to legally trespass on private property, enables your third eye and dimensional travel, does not include barbie, it would be kinda weird.",
@@ -328,6 +359,7 @@ const productData = [
 		price: 699.95,
 		image:
 			"https://www.rei.com/media/90cee30d-8a65-4cee-abde-93c3279d5971.jpg?size=2000",
+		rating: 5,
 		short_desc:
 			"High and long rise tip and tail rocker facilitates maneuverability, both on the ground and in the air.",
 		long_desc:
@@ -350,6 +382,7 @@ const productData = [
 		price: 1049.95,
 		image:
 			"https://www.rei.com/media/8e17d8bb-92d1-4898-82f2-63c3e4503ea5.jpg?size=2000",
+		rating: 4,
 		short_desc:
 			"Oversize sidecut delivers a responsive feel with quick edge engagement and powerful, consistent carving.",
 		long_desc:
@@ -361,6 +394,7 @@ const productData = [
 		price: 799.95,
 		image:
 			"https://www.rei.com/media/aa610c61-6566-4c36-bbd0-461bc171955d.jpg?size=2000",
+		rating: 5,
 		short_desc:
 			"Carbon fiber and fiberglass combine for a stout, stable platform underfoot, while the tips and tails remain playful and nimble.",
 		long_desc:
@@ -372,6 +406,7 @@ const productData = [
 		price: 799.95,
 		image:
 			"https://www.rei.com/media/8f4ee02f-0bd7-4749-8a27-ccae26cc1948.jpg?size=2000",
+		rating: 3,
 		short_desc:
 			"Camber underfoot and early rise in the tips and tails adapt to whatever the mountain throws at you.",
 		long_desc:
@@ -383,6 +418,7 @@ const productData = [
 		price: 799.95,
 		image:
 			"https://www.rei.com/media/dcb918fd-4767-4734-8bc5-bc069faecaeb.jpg?size=2000",
+		rating: 5,
 		short_desc:
 			"These skis deliver excellent downhill performance for the weight and function as if they were designed specifically for a high level of downhill performance.",
 		long_desc:
