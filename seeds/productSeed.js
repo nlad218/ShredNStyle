@@ -62,7 +62,7 @@ const productData = [
 		price: 689.95,
 		image:
 			"https://www.burton.com/static/product/W24/10013111402_5.png?impolicy=bglt&imwidth=486",
-		review: 5,
+		rating: 5,
 		short_desc:
 			"An ultra-lightweight, packable GORE-TEX jacket with splitboard-specific utility for the earn-your-turn crowd.",
 		long_desc:
@@ -74,7 +74,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10353109021_1.png?impolicy=bglt&imwidth=486",
-		review: 3,
+		rating: 3,
 		short_desc: "Ride All Day, Any Day",
 		long_desc:
 			"We ask a lot of our hands during a day on the mountain. If you are someone who rides regardless of the weather, the men's Burton GORE-TEX Gloves are for you. They offer set-it-and-forget-it coverage that you can count on to ride day in and day out without having to worry about whether your hands can weather the weather.",
@@ -85,7 +85,7 @@ const productData = [
 		price: 84.95,
 		image:
 			"https://www.burton.com/static/product/W24/10384109021_1.png?impolicy=bglt&imwidth=486",
-		review: 4,
+		rating: 4,
 		short_desc: "Ride All Day, Any Day",
 		long_desc:
 			" They offer set-it-and-forget-it coverage that you can count on to ride day in and day out without having to worry about whether your hands can weather the weather.",
@@ -96,7 +96,7 @@ const productData = [
 		price: 79.95,
 		image:
 			"https://www.burton.com/static/product/W24/10331109021_1.png?impolicy=bglt&imwidth=486",
-		review: 4,
+		rating: 4,
 		short_desc: "Buckle, zip, grab. Your hands are essential",
 		long_desc:
 			"Give them the warm, dry world they deserve with the men's Burton Reverb GORE-TEX Gloves. All the tech in a durable package, so you can just keep riding and not worry about how long your hands are gonna stay comfy.",
@@ -371,6 +371,7 @@ const productData = [
 		price: 899.95,
 		image:
 			"https://www.rei.com/media/f20ad5a8-e393-456b-afa7-f7d988bedb82.jpg?size=2000",
+		rating: 5,
 		short_desc:
 			"Double Rocker profile sets the bar for fun, responsive skiing.",
 		long_desc:
