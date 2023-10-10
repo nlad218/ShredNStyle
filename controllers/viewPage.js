@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const { Category, Product, ResortInfo } = require("../models");
 
 const checkLoggedIn = (req, res, next) => {
