@@ -69,8 +69,16 @@ async function fetchWeatherData(city) {
     );
 
     if (response.ok) {
-      const weatherData = await response.json();
-      console.log(weatherData);
+      const resortData = await response.json();
+
+      const data = {
+        name: resortData.resortName,
+        state: resortData.state,
+        lat: parseFloat(resortData.lat),
+        long: parseFloat(resortData.long),
+      };
+
+      console.log(data);
     } else {
       console.error("Error:", response.status);
     }
@@ -79,24 +87,27 @@ async function fetchWeatherData(city) {
   }
 }
 
+// Attach the event listener to a parent element
 document.querySelector(".row").addEventListener("click", function (e) {
+  // Check if the clicked element has the class "weather"
   if (e.target.classList.contains("weather")) {
     e.preventDefault();
     const cityName = e.target.value;
+    // Call the getWeather function here or perform any other action
     fetchWeatherData(cityName);
+    weatherResponse();
   }
 });
 
-// var requestWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city},us&units=imperial&APPID=6125957e3b746825efbf44ae31af7452`;
+// const apiKey =
 
-// fetch(requestWeather)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
+async function weatherResponse() {
+  await fetch(`${url}lat=${data.lat}&lon=${data.long}&cnt=14&appid=${apiKey}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json", // Specify JSON content type
+    },
+  });
+}
 
-//     fiveDayForecast(data);
-//     saveSearch(data.name);
-//     displayWeather(data);
-//   });
+console.log(weatherResponse);
