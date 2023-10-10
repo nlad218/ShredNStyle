@@ -7,7 +7,6 @@ async function fetchWeatherData(city) {
         "Content-Type": "application/json", // Specify JSON content type
       },
     });
-
     if (response.ok) {
       const resortData = await response.json();
 
@@ -35,5 +34,19 @@ document.querySelector(".row").addEventListener("click", function (e) {
     const cityName = e.target.value;
     // Call the getWeather function here or perform any other action
     fetchWeatherData(cityName);
+    weatherResponse();
   }
 });
+
+// const apiKey =
+
+async function weatherResponse() {
+  await fetch(`${url}lat=${data.lat}&lon=${data.long}&cnt=14&appid=${apiKey}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json", // Specify JSON content type
+    },
+  });
+}
+
+console.log(weatherResponse);

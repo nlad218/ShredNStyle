@@ -14,6 +14,10 @@ UserProduct.init(
       type: DataTypes.INTEGER,
       references: { model: "product", key: "id" },
     },
+    quantity: {
+      type: DataTypes.INTEGER,
+      unique: false,
+    },
 
     // Color and Size Options
     //  color_op: {

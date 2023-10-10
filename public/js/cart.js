@@ -1,8 +1,8 @@
-// const cart = JSON.parse(localStorage.getItem("cart")) || [];
-// const cartEl = document.querySelector(".cart");
-// for (let i = 0; i < cart.length; i++) {
-//   console.log(cart[i]);
-// }
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cartEl = document.querySelector(".cart");
+for (let i = 0; i < cart.length; i++) {
+  console.log(cart[i]);
+}
 
 // const cartItemTemplateSource =
 //   document.getElementById("cart-item-template").innerHTML;
@@ -21,11 +21,12 @@
 //   const cartItemHTML = cartItemTemplate(context);
 
 //   cartItemsContainer.innerHTML += cartItemHTML;
-// }
+//}
 
 const handleAddToCart = async (e) => {
   const product_id = document.getElementById("product-id").value;
-  const quantity = document.querySelector(".num").value;
+  const quantity = parseInt(document.querySelector(".num").innerText);
+  console.log(quantity);
   const response = await fetch(`/api/orders/cart/${product_id}`, {
     method: "POST",
 
