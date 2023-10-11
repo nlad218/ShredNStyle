@@ -44,6 +44,7 @@ router.get("/", async (req, res) => {
 
 router.get("/allproducts", async (req, res) => {
   try {
+    console.log("---------HELLO---")
     // Retrieve all products
     const passData = await Product.findAll({
       where: {
