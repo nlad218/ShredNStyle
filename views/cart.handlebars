@@ -11,7 +11,7 @@
       <h3 class="col">Total</h3>
       <h3 class="col">${{totalCartPrice}}</h3>
       </div>
-      <button class="btn btn-primary" data-bs-toggle="modal"
+      <button id="payButton" class="btn btn-primary" data-bs-toggle="modal"
 			data-bs-target="#paymentModal">Proceed to Checkout</button>
     </div>
   </div>
@@ -43,7 +43,7 @@
                     <label for="name-on-card">Name on Card</label>
                     <input type="text" class="form-control" id="name-on-card" name="name-on-card" placeholder="Name on Card" required>
                 </div>
-                <button id="payButton" class="btn btn-success proPageButton mt-5">Pay Now</button>
+                <button id="payButton" class="btn btn-success mt-5">Pay Now</button>
             </form>
           </div>
         </div>

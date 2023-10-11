@@ -292,12 +292,14 @@ footer {
 	color: var(--light);
 }
 
-.tab-content button {
+.tab-content button,
+#payButton {
 	background-color: var(--gold);
 	color: black;
 }
 
-.tab-content button:hover {
+.tab-content button:hover,
+#payButton:hover {
 	background-color: var(--lightGold);
 }
 
