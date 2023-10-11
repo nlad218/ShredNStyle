@@ -37,5 +37,22 @@ npm run test
 
 ## Questions
 
+Nick Deignan
 If you have any questions please email me at nlad218@gmail.com
 If you want to see more of my work please visit me at [nlad218](https://github.com/nlad218)
+
+Jordan Adams
+If you have any questions please email me at Jadams1812@hotmail.com
+If you want to see more of my work please visit me at [JMADA257](https://github.com/JMADA257)
+
+Jake Zook
+If you have any questions please email me at Jakezook01@gmail.com
+If you want to see more of my work please visit me at [JakeZook](https://github.com/JakeZook)
+
+Mitchell Morgan
+If you have any questions please email me at mitchemorgan@gmail.com
+If you want to see more of my work please visit me at [M1TCH3llM](https://github.com/M1TCH3llM)
+
+Dallas Thompson
+If you have any questions please email me at
+If you want to see more of my work please visit me at [DallasThompson](https://github.com/DallasThompson)
