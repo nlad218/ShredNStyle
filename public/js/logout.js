@@ -11,7 +11,6 @@ const logout = async () => {
 			const modalInstance = new bootstrap.Modal(modal);
 			modalInstance.show();
 
-			// Optionally, add a delay before redirecting
 			setTimeout(() => {
 				// Redirect the user to the login page or any other desired page after logout.
 				document.location.replace("/");
