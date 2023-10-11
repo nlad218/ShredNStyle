@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/allProducts", async (req, res) => {
+router.get("/allproducts", async (req, res) => {
   try {
     // Retrieve all products
     const passData = await Product.findAll({
