@@ -25,4 +25,20 @@ const sendVerificationEmail = async (userEmail) => {
   }
 };
 
-module.exports = { sendVerificationEmail };
+const sendConfirmationEmail = async (userEmail) => {
+  const mailOptions = {
+    from: "ShredNStyle@gmail.com",
+    to: userEmail,
+    subject: "Order Confirmation",
+    html: "<p>Your order has been placed through ShredNStyles marketplace.</p>",
+  }
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent: ", info);
+    return true;
+  } catch (error) {
+    console.error("Error sending email: ", error);
+  }
+}
+
+module.exports = { sendVerificationEmail, sendConfirmationEmail };
