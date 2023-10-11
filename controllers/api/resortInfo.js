@@ -32,7 +32,6 @@ router.get("/", async (req, res) => {
       icon: weatherResponse.data.weather[0].icon,
       temp: weatherResponse.data.main.temp,
     };
-    console.log(cleanWeather);
 
     res.status(200).json(cleanWeather);
   } catch (error) {

@@ -4,8 +4,6 @@
 async function resortDetail(event) {
 	//statetext in local variable grabbing value of the user's selection and trimming white space out
 	const stateText = event.target.textContent.trim();
-	console.log(stateText);
-	console.log(window.location.href);
 	window.location.href += `/${stateText}`;
 }
 

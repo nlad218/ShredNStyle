@@ -31,6 +31,7 @@ router.post("/signup", async (req, res) => {
 			password: req.body.password,
 		});
 
+<<<<<<< HEAD
 		// dbOrderData = await Order.create({
 		// 	userID: newUser.id,
 		// 	purchaseAmt: 0,
@@ -41,6 +42,13 @@ router.post("/signup", async (req, res) => {
 			req.session.userId = newUser.id;
 			req.session.username = newUser.username;
 			// req.session.orderId = dbOrderData.id;
+=======
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      req.session.userId = newUser.id;
+      req.session.username = newUser.username;
+
+>>>>>>> main
 
 			sendVerificationEmail(newUser.email);
 			res.status(204).end();
@@ -53,6 +61,7 @@ router.post("/signup", async (req, res) => {
 
 //login
 router.post("/login", async (req, res) => {
+<<<<<<< HEAD
 	try {
 		const dbUserData = await User.findOne({
 			where: {
@@ -64,12 +73,25 @@ router.post("/login", async (req, res) => {
 			// Combine both error conditions into one response
 			return res.status(400).end();
 		}
+=======
+  try {
+    const dbUserData = await User.findOne({
+      where: {
+        [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
+      },
+    });
+    if (!dbUserData) {
+      // Combine both error conditions into one response
+      return res.status(400).end();
+    }
+>>>>>>> main
 
 		const validPassword = await dbUserData.checkPassword(
 			req.body.password,
 			dbUserData.password
 		);
 
+<<<<<<< HEAD
 		if (!validPassword) {
 			// Combine both error conditions into one response
 			console.log(req);
@@ -101,6 +123,25 @@ router.post("/login", async (req, res) => {
 		console.log(err);
 		res.status(500).json(err);
 	}
+=======
+    if (!validPassword) {
+      // Combine both error conditions into one response
+
+      return res.status(400).end();
+    }
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      req.session.userId = dbUserData.dataValues.id;
+      req.session.username = dbUserData.dataValues.username;
+
+      res.status(204).end();
+    });
+  } catch (err) {
+
+    res.status(500).json(err);
+  }
+>>>>>>> main
 });
 
 // Logout
