@@ -1,19 +1,26 @@
 <main>
   <div class="container mt-5">
     <h1 class="m-4">Your Cart</h1>
-    <div class="cart-items d-flex flex-column align-items-center" id="cart-items">
-      {{#each productsInCart as |product|}}
-        {{> cartItems}}
-        {{/each}}
-    </div>
-    <div class="text-center d-flex flex-column align-items-center">
-      <div class="row cartTotal">
-      <h3 class="col">Total</h3>
-      <h3 class="col">${{totalCartPrice}}</h3>
+    {{#if productsInCart}}
+      <div class="cart-items d-flex flex-column align-items-center" id="cart-items">
+        {{#each productsInCart as |product|}}
+          {{> cartItems}}
+          {{/each}}
       </div>
-      <button class="btn proPageButton" data-bs-toggle="modal"
-      data-bs-target="#paymentModal">Proceed to Checkout</button>
-    </div>
+      <div class="text-center d-flex flex-column align-items-center">
+        <div class="row cartTotal">
+        <h3 class="col">Total</h3>
+        <h3 class="col">${{totalCartPrice}}</h3>
+        </div>
+        <button class="btn proPageButton" data-bs-toggle="modal"
+        data-bs-target="#paymentModal">Proceed to Checkout</button>
+      </div>
+    {{else}}
+      <div class="text-center">  
+        <h1>Your cart is empty</h1>
+        <a class="btn payButton" href="/allProducts">Go to Shop</a>
+      </div>
+    {{/if}}
   </div>
 
     <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
@@ -25,23 +32,52 @@
           </div>
           <div class="model-body">
             <form class="d-flex flex-column p-3">
-                <div class="form-group m-2">
-                    <label for="card-number">Card Number:</label>
-                    <input type="text" class="form-control" id="card-number" name="card-number" placeholder="Card Number" required>
+              <div class="mb-3 text-start">
+                <label for="paymentCard"  class="form-label">Credit Card Number:</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front" viewBox="0 0 16 16">
+                      <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                      <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                  </span>
+                  <input type="number" name="cardNumber" class="form-control" placeholder="Enter your credit card number: " autocomplete="off">
                 </div>
-                <div class="form-row m-2">
-                    <div class="col-md-6 form-group">
-                        <label for="expiration-date">Expiration Date:</label>
-                        <input type="text" class="form-control" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
-                    </div>
-                    <div class="col-md-6 form-group mt-2">
-                        <label for="cvv">CVV:</label>
-                        <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV" required>
-                    </div>
+              </div>
+                <div class="mb-3 text-start">
+                  <label for="paymentExp" class="form-label">Expiration Date:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4-event" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+                        <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                      </svg>
+                    </span>
+                    <input type="date" class="form-control" name="expDate" placeholder="00/00/0000">
+                  </div>
                 </div>
-                <div class="form-group m-2">
-                    <label for="name-on-card">Name on Card:</label>
-                    <input type="text" class="form-control" id="name-on-card" name="name-on-card" placeholder="Name on Card" required>
+                <div class="mb-3 text-start">
+                  <label for="paymentCvc" class="form-label">CVC:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
+                        <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
+                        <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
+                      </svg>
+                    </span>
+                    <input type="number" class="form-control" name="CVC" placeholder="XXX">
+                  </div>
+                </div>
+                <div class="mb-3 text-start">
+                  <label for="paymentName" class="form-label">Name:</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+                      <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+                      </svg>
+                    </span>
+                    <input type="text" class="form-control" name="name" placeholder="John Doe">
+                  </div>
                 </div>
                 <button id="payButton" class="btn payButton mt-5">Pay Now</button>
             </form>
