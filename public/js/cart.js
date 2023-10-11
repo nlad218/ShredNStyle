@@ -1,5 +1,4 @@
 const handleAddToCart = async (e) => {
-
 	const product_id = document.getElementById("product-id").value;
 	const quantity = parseInt(document.querySelector(".num").innerText);
 	const response = await fetch(`/api/orders/cart/${product_id}`, {
@@ -20,5 +19,5 @@ const handleAddToCart = async (e) => {
 };
 
 document
-  .getElementById("addcartbtn")
-  .addEventListener("click", handleAddToCart);
+	.getElementById("addcartbtn")
+	.addEventListener("click", handleAddToCart);
