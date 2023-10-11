@@ -17,23 +17,34 @@ const sendVerificationEmail = async (userEmail) => {
   };
 
   try {
-    const info = await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
+    
     return true;
   } catch (error) {
     console.error("Error sending email: ", error);
   }
 };
 
-const sendConfirmationEmail = async (userEmail) => {
+const sendConfirmationEmail = async (userEmail, products, productCount) => {
+  let total = 0;
+  let productString = "";
+
+  products.forEach((product) => {
+    total += product.dataValues.price * productCount[product.dataValues.id];
+    productString += `<li>${productCount[product.dataValues.id]} ${product.dataValues.name}: $${product.dataValues.price}</li>`;
+  });
+
+  let email = `<p>Your order has been placed through ShredNStyles marketplace.</p> <div> Your total: $${total}</div><div><ul>${productString}</ul></div>`;
+
   const mailOptions = {
     from: "ShredNStyle@gmail.com",
     to: userEmail,
     subject: "Order Confirmation",
-    html: "<p>Your order has been placed through ShredNStyles marketplace.</p>",
+    html: email,
   }
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent: ", info);
+    await transporter.sendMail(mailOptions);
+    
     return true;
   } catch (error) {
     console.error("Error sending email: ", error);
