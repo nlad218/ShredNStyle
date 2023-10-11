@@ -92,10 +92,24 @@ router.post("/logout", (req, res) => {
 	}
 });
 
-router.post("/pay", async (req, res) => {
-	const user = await UserProduct.findAll();
+router.delete("/pay", async (req, res) => {
+	const userId = req.session.userId;
+	const userProducts = await UserProduct.findAll({
+		where: {
+			user_id: userId,
+		},
+	});
 
-	console.log(user.quantity);
+	const deletionPromises = userProducts.map(async (userProduct) => {
+		await userProduct.destroy();
+	});
+
+	try {
+		await Promise.all(deletionPromises);
+		return res.status(204).send();
+	} catch (err) {
+		return res.status(500).send("Internal Server Error");
+	}
 });
 
 module.exports = router;

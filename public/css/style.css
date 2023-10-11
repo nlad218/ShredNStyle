@@ -293,13 +293,13 @@ footer {
 }
 
 .tab-content button,
-#payButton {
+.payButton {
 	background-color: var(--gold);
 	color: black;
 }
 
 .tab-content button:hover,
-#payButton:hover {
+.payButton:hover {
 	background-color: var(--lightGold);
 }
 
