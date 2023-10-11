@@ -1,6 +1,15 @@
 const router = require("express").Router();
-const { User, Order, OrderProduct, UserProduct, Product } = require("../../models");
-const { sendVerificationEmail, sendConfirmationEmail } = require("../../utils/sendemail.js");
+const {
+	User,
+	Order,
+	OrderProduct,
+	UserProduct,
+	Product,
+} = require("../../models");
+const {
+	sendVerificationEmail,
+	sendConfirmationEmail,
+} = require("../../utils/sendemail.js");
 const { Op } = require("sequelize");
 
 // Create a new user
@@ -95,18 +104,18 @@ router.post("/logout", (req, res) => {
 router.delete("/pay", async (req, res) => {
 	const userId = req.session.userId;
 	const userEmail = await User.findOne({
-		attributes: ['email'], 
+		attributes: ["email"],
 		where: {
 			id: userId,
 		},
 	});
-	
+
 	const userProducts = await UserProduct.findAll({
 		where: {
 			user_id: userId,
 		},
 	});
-	
+
 	let productIds = [];
 	let productCount = {};
 	userProducts.forEach((product) => {
@@ -115,14 +124,13 @@ router.delete("/pay", async (req, res) => {
 		productIds.push(item);
 		productCount[item["id"]] = product.dataValues.quantity;
 	});
-	
-	const products = await Product.findAll({ 
+
+	const products = await Product.findAll({
 		where: {
-			[Op.or]: productIds,	
+			[Op.or]: productIds,
 		},
 	});
-	
-	
+
 	const deletionPromises = userProducts.map(async (userProduct) => {
 		await userProduct.destroy();
 	});
