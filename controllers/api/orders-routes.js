@@ -19,24 +19,23 @@ router.post("/cart/:productId", async (req, res) => {
     const userId = req.session.userId;
 
     const product_id = req.params.productId;
-    const user = await User.findByPk(userId);
+    // const user = await User.findByPk(userId);
 
     const product = await Product.findByPk(product_id);
 
-    console.log(user.id, product_id);
-    if (!user || !product) {
+    if (!userId || !product) {
       return res.status(404).json({ message: "User or product not found." });
     }
 
     let userProduct = await UserProduct.findOne({
       where: {
-        user_id: user.id,
+        user_id: userId,
         product_id: product.id,
       },
     });
     if (!userProduct) {
       userProduct = await UserProduct.create({
-        user_id: user.id,
+        user_id: userId,
         product_id: product.id,
         quantity: req.body.quantity,
       });
@@ -45,30 +44,46 @@ router.post("/cart/:productId", async (req, res) => {
         quantity: userProduct.quantity + req.body.quantity,
       });
     }
-    // const cartItems = await UserProduct.findAll({
-    //   where: {
-    //     user_id: user.id,
-    //   },
-    //   include: Product,
-    // });
 
     let total = 0;
     total = req.body.quantity * product.price;
 
-    // await Order.upsert(
-    //   {
-    //     purchaseAmt: total,
-    //   },
-    //   {
-    //     where: {
-    //       userId: user.id,
-    //     },
-    //   }
-    // );
-
     return res
       .status(201)
       .json({ message: "Product added to cart successfully." });
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+// Create a DELETE route to remove an item from the cart
+router.delete("/cart/:productId", async (req, res) => {
+  try {
+    if (!req.session.loggedIn) {
+      return res
+        .status(401)
+        .json({ message: "You must be logged in to modify your cart." });
+    }
+
+    const userId = req.session.userId;
+
+    const productId = req.params.productId;
+
+    const userProduct = await UserProduct.findOne({
+      where: {
+        user_id: userId,
+        product_id: productId,
+      },
+    });
+
+    if (!userProduct) {
+      return res.status(404).json({ message: "Item not found in the cart." });
+    }
+
+    await userProduct.destroy();
+
+    res.status(204).end();
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ message: "Internal server error." });

@@ -17,7 +17,6 @@ Handlebars.registerHelper("formatPhoneNumber", function (phoneNumber) {
 		}
 	}
 
-	console.log(phoneNumber);
 	// Return the original phoneNumber if it cannot be formatted
 	return phoneNumber;
 });
