@@ -54,5 +54,5 @@ If you have any questions please email me at mitchemorgan@gmail.com
 If you want to see more of my work please visit me at [M1TCH3llM](https://github.com/M1TCH3llM)
 
 Dallas Thompson
-If you have any questions please email me at
+If you have any questions please email me at dallasthompson94@gmail.com
 If you want to see more of my work please visit me at [DallasThompson](https://github.com/DallasThompson)
