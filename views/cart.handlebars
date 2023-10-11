@@ -1,19 +1,26 @@
 <main>
   <div class="container mt-5">
     <h1 class="m-4">Your Cart</h1>
-    <div class="cart-items d-flex flex-column align-items-center" id="cart-items">
-      {{#each productsInCart as |product|}}
-        {{> cartItems}}
-        {{/each}}
-    </div>
-    <div class="text-center d-flex flex-column align-items-center">
-      <div class="row cartTotal">
-      <h3 class="col">Total</h3>
-      <h3 class="col">${{totalCartPrice}}</h3>
+    {{#if productsInCart}}
+      <div class="cart-items d-flex flex-column align-items-center" id="cart-items">
+        {{#each productsInCart as |product|}}
+          {{> cartItems}}
+          {{/each}}
       </div>
-      <button class="btn proPageButton" data-bs-toggle="modal"
-      data-bs-target="#paymentModal">Proceed to Checkout</button>
-    </div>
+      <div class="text-center d-flex flex-column align-items-center">
+        <div class="row cartTotal">
+        <h3 class="col">Total</h3>
+        <h3 class="col">${{totalCartPrice}}</h3>
+        </div>
+        <button class="btn proPageButton" data-bs-toggle="modal"
+        data-bs-target="#paymentModal">Proceed to Checkout</button>
+      </div>
+    {{else}}
+      <div class="text-center">  
+        <h1>Your cart is empty</h1>
+        <a class="btn payButton" href="/allProducts">Go to Shop</a>
+      </div>
+    {{/if}}
   </div>
 
     <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
