@@ -17,8 +17,43 @@
       <h3 class="col">Total</h3>
       <h3 class="col">${{totalCartPrice}}</h3>
       </div>
-      <button class="btn btn-primary">Proceed to Checkout</button>
+      <button class="btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#paymentModal">Proceed to Checkout</button>
     </div>
   </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content pass-modal">
+          <div class="modal-header d-flex flex-column-reverse">
+            <h4 class="modal-title text-center" id="IconModalLabel">Payment Information</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="model-body">
+            <form class="d-flex flex-column p-3">
+                <div class="form-group m-2">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" class="form-control" id="card-number" name="card-number" placeholder="Card Number" required>
+                </div>
+                <div class="form-row m-2">
+                    <div class="col-md-6 form-group">
+                        <label for="expiration-date">Expiration Date</label>
+                        <input type="text" class="form-control" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+                    </div>
+                    <div class="col-md-6 form-group m-2">
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV" required>
+                    </div>
+                </div>
+                <div class="form-group m-2">
+                    <label for="name-on-card">Name on Card</label>
+                    <input type="text" class="form-control" id="name-on-card" name="name-on-card" placeholder="Name on Card" required>
+                </div>
+                <button id="payButton" class="btn btn-success proPageButton mt-5">Pay Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/pay.js"></script>
 </main>
-{{! <script src="/js/cart.js"></script>  }}
