@@ -44,7 +44,7 @@ router.get("/", async (req, res) => {
 
 router.get("/allproducts", async (req, res) => {
   try {
-    console.log("---------HELLO---")
+    console.log("---------HELLO---");
     // Retrieve all products
     const passData = await Product.findAll({
       where: {
@@ -81,7 +81,7 @@ router.get("/allproducts", async (req, res) => {
     const skis = skiData.map((product) => product.get({ plain: true }));
 
     // Render the "allpass" template and pass the filtered pass
-    res.render("products2", { pass, outerwear, accessories, boards, skis });
+    res.render("allproducts", { pass, outerwear, accessories, boards, skis });
   } catch (err) {
     res.status(500).json(err);
   }
