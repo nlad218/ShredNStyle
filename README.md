@@ -4,7 +4,7 @@
 
 ## Description
 
-Welcome to Shred'N Kens, your premier destination for all things winter sports. Explore a meticulously curated collection of top-tier gear and passes. Stay informed with real-time mountain weather updates for an unparalleled adventure. Elevate your winter experiences with us.
+Welcome to ShredNStyle – your ultimate destination for all things mountain adventure! ShredNStyle is not just an e-commerce app; it's your gateway to a world of mountain exploration, where passion meets practicality. https://shrednstyle-a1ce73eecb82.herokuapp.com/
 
 ## Table of contents
 
