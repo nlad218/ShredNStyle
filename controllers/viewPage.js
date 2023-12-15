@@ -80,7 +80,7 @@ router.get("/allProducts", async (req, res) => {
     const skis = skiData.map((product) => product.get({ plain: true }));
 
     // Render the "allpass" template and pass the filtered pass
-    res.render("allproducts", { pass, outerwear, accessories, boards, skis });
+    res.render("allProducts", { pass, outerwear, accessories, boards, skis });
   } catch (err) {
     res.status(500).json(err);
   }
