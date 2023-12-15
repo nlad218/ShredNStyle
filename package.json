@@ -25,7 +25,8 @@
     "handlebars": "^4.7.6",
     "mysql2": "^2.2.5",
     "nodemailer": "^6.9.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "stripe": "^14.9.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

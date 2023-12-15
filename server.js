@@ -1,6 +1,9 @@
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
+const stripe = require("stripe")(
+  "sk_test_51ONJjPHUvmZoX0kbRxx5PMllzJARJyV1L0cYmulfjSdFsD9YxPShpTev5ra7gZsJppaWfIVFFBeK8Ep5UxUap6Y000U4KKKwBf"
+);
 const exphbs = require("express-handlebars");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -36,6 +39,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
+
+// app.post("/create-checkout-session", async (req, res) => {
+//   const session = await stripe.checkout.sessions.create({
+//     line_items: [
+//       {
+//         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+//         price: "{{totalCartPrice}}",
+//         quantity: 1,
+//       },
+//     ],
+//     mode: "payment",
+//     success_url: `${YOUR_DOMAIN}/success.html`,
+//     cancel_url: `${YOUR_DOMAIN}/success.html`,
+//   });
+
+//   res.redirect(303, session.url);
+// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>

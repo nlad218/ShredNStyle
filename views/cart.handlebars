@@ -12,8 +12,11 @@
         <h3 class="col">Total</h3>
         <h3 class="col">${{totalCartPrice}}</h3>
         </div>
-        <button class="btn proPageButton" data-bs-toggle="modal"
-        data-bs-target="#paymentModal">Proceed to Checkout</button>
+        <button class="btn proPageButton" data-checkout-mode="payment"
+              data-price-id="totalCartPrice">Proceed to Checkout</button>
+        {{!-- <form action="/create-checkout-session" method="POST">
+        <button class="btn proPageButton" type="submit" id="checkout-button">Checkout</button>
+      </form> --}}
         <a href="/"class="btn proPageButton">Continue Shopping</a>
       </div>
     {{else}}
@@ -23,8 +26,50 @@
       </div>
     {{/if}}
   </div>
+<script>
+      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+      var PUBLISHABLE_KEY = 'pk_test_51ONJjPHUvmZoX0kbPQHrJmQ1RpnXH85HdBlkcCv5g123QPsTO2s1h3o56GFSjpBmnGpCqS98UUJcsjHFHA8jdHZb00e4m96zYN';
+      // Replace with the domain you want your users to be redirected back to after payment
+      var DOMAIN = location.href.replace(/[^/]*$/, '');
 
-    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+      if (PUBLISHABLE_KEY === 'pk_test_51ONJjPHUvmZoX0kbPQHrJmQ1RpnXH85HdBlkcCv5g123QPsTO2s1h3o56GFSjpBmnGpCqS98UUJcsjHFHA8jdHZb00e4m96zYN') {
+        console.log(
+          'Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys'
+        );
+      }
+
+      var stripe = Stripe(PUBLISHABLE_KEY);
+
+      // Handle any errors from Checkout
+      var handleResult = function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      };
+
+      document.querySelectorAll('button').forEach(function (button) {
+        button.addEventListener('click', function (e) {
+          var mode = e.target.dataset.checkoutMode;
+          var priceId = e.target.dataset.priceId;
+          var items = [{ price: priceId, quantity: 1 }];
+
+          // Make the call to Stripe.js to redirect to the checkout page
+          // with the sku or plan ID.
+          stripe
+            .redirectToCheckout({
+              mode: mode,
+              lineItems: items,
+              successUrl:
+                DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
+              cancelUrl:
+                DOMAIN + 'canceled.html?session_id={CHECKOUT_SESSION_ID}',
+            })
+            .then(handleResult);
+        });
+      });
+    </script>
+    {{!-- <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content pass-modal">
           <div class="modal-header d-flex flex-column-reverse">
@@ -99,5 +144,5 @@
         </div>
       </div>
     </div>
-    <script src="/js/pay.js"></script>
+    <script src="/js/pay.js"></script> --}}
 </main>
